@@ -1,6 +1,9 @@
 // documents
 import site from './documents/site'
 import page from './documents/page'
+import category from './documents/category'
+import artwork from './documents/artwork'
+import collection from './documents/collection'
 
 // objects
 import cta from './objects/cta'
@@ -17,6 +20,9 @@ export const schemaTypes = [
 	// documents
 	site,
 	page,
+	category,
+	artwork,
+	collection,
 
 	// objects
 	cta,
