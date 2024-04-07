@@ -17,7 +17,7 @@ export default defineConfig({
 	name: 'default',
 	title: 'Next.js + Sanity Template',
 
-	projectId: 'elyfelq1',
+	projectId: 'uuwh1ghz',
 	dataset: 'production',
 
 	plugins: [
