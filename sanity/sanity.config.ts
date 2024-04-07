@@ -1,28 +1,36 @@
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
+import defaultDocumentNode from './src/defaultDocumentNode'
+import structure from './src/structure'
 import {
 	dashboardTool,
 	projectInfoWidget,
 	projectUsersWidget,
 } from '@sanity/dashboard'
+import { vercelWidget } from 'sanity-plugin-dashboard-widget-vercel'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemas'
-
-import defaultDocumentNode from './src/defaultDocumentNode'
-import structure from './src/structure'
 
 const singletonTypes = ['site']
 
 export default defineConfig({
 	name: 'default',
-	title: 'Next.js + Sanity Template',
+	title: 'TheOhtani.com',
 
 	projectId: 'uuwh1ghz',
 	dataset: 'production',
 
 	plugins: [
 		structureTool({ defaultDocumentNode, structure }),
-		dashboardTool({ widgets: [projectInfoWidget(), projectUsersWidget()] }),
+		dashboardTool({
+			widgets: [
+				projectInfoWidget(),
+				projectUsersWidget(),
+				vercelWidget({
+					layout: { width: 'auto' },
+				}),
+			],
+		}),
 		visionTool(),
 	],
 
