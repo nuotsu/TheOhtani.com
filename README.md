@@ -10,7 +10,6 @@ Referenced documentation: [`next-sanity` README](https://github.com/sanity-io/ne
 - helpful Sanity schema for easy page creation
   - `cta`, `link` and `link.list` objects
   - `page` document with a `modules` array and a `metadata` object
-  - `blog.post` and `blog.category` documents
   - several sample modules (`sanity/modules/*.ts`)
 
 ## Initialize a Sanity project and grab the project ID
@@ -44,7 +43,7 @@ import Img from "@/ui/Img";
   image={image}
   alt="..."
   options={{
-    imageBuilder: (b) => b.width(200), // for a 100px wide image
+    imageBuilder: b => b.width(200), // for a 100px wide image
   }}
 />;
 ```

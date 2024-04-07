@@ -12,11 +12,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 					metadata.slug.current == 'index' => 1,
 					0.5
 				),
-			},
-			'posts': *[_type == 'blog.post']|order(name){
-				'url': $baseUrl + 'blog/' + metadata.slug.current,
-				'lastModified': _updatedAt,
-				'priority': 0.4
 			}
 		}`,
 		{

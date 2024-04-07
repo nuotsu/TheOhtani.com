@@ -18,19 +18,6 @@ declare global {
 			metadata: Metadata
 		}
 
-		type BlogPost = SanityDocument & {
-			readonly _type: 'blog.post'
-			title: string
-			body: any
-			categories: BlogCategory[]
-			publishDate: string
-			metadata: Metadata
-		}
-
-		type BlogCategory = SanityDocument & {
-			title: string
-		}
-
 		// objects
 
 		type CTA = {
@@ -46,7 +33,7 @@ declare global {
 			readonly _type: 'link'
 			label: string
 			type: 'internal' | 'external'
-			internal?: Page | BlogPost
+			internal?: Page
 			external?: string
 			params?: string
 		}

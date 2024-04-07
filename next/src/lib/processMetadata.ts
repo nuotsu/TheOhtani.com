@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
 import getSite from './getSite'
 import { BASE_URL } from './env'
+import type { Metadata } from 'next'
 
 export default async function processMetadata({
 	metadata,
 	noIndex,
-}: Sanity.Page | Sanity.BlogPost): Promise<Metadata> {
+}: Sanity.Page): Promise<Metadata> {
 	const { ogimage } = await getSite()
 	const { title, description, slug } = metadata
 
