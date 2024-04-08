@@ -5,7 +5,10 @@ import type { Metadata } from 'next'
 export default async function processMetadata({
 	metadata,
 	noIndex,
-}: Sanity.Page): Promise<Metadata> {
+}: {
+	metadata: Sanity.Metadata
+	noIndex?: boolean
+}): Promise<Metadata> {
 	const { ogimage } = await getSite()
 	const { title, description, slug } = metadata
 
@@ -15,7 +18,7 @@ export default async function processMetadata({
 		description,
 		openGraph: {
 			type: 'website',
-			url: [slug.current === 'index' ? '/' : slug.current]
+			url: [slug?.current === 'index' ? '/' : slug?.current]
 				.filter(Boolean)
 				.join('/'),
 			title,

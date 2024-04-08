@@ -18,6 +18,25 @@ declare global {
 			metadata: Metadata
 		}
 
+		type Category = SanityDocument & {
+			metadata: Metadata
+			count?: number
+			items?: Artwork[]
+		}
+
+		type Artwork = SanityDocument & {
+			title: string
+			image: Image
+			description: any
+			category: Category
+			slug: { current: string }
+		}
+
+		type Collection = SanityDocument & {
+			items: Artwork[]
+			metadata: Metadata
+		}
+
 		// objects
 
 		type CTA = {

@@ -12,9 +12,10 @@ import linkList from './objects/link.list'
 import metadata from './objects/metadata'
 
 // modules
+import categoryList from './modules/category-list'
+import faqList from './modules/faq-list'
 import heroCentered from './modules/hero.centered'
 import heroPostcard from './modules/hero.postcard'
-import faqList from './modules/faq-list'
 
 export const schemaTypes = [
 	// documents
@@ -31,6 +32,7 @@ export const schemaTypes = [
 	metadata,
 
 	// modules
+	categoryList,
 	faqList,
 	heroCentered,
 	heroPostcard,

@@ -21,7 +21,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 		},
 	)
 
-	console.log({ allPages })
-
 	return Object.values(allPages).flat()
 }

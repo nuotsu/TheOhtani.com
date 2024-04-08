@@ -26,6 +26,7 @@ export default defineType({
 			name: 'modules',
 			type: 'array',
 			of: [
+				{ type: 'category-list' },
 				{ type: 'faq-list' },
 				{ type: 'hero.centered' },
 				{ type: 'hero.postcard' },

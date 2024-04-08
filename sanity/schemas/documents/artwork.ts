@@ -23,7 +23,12 @@ export default defineType({
 		defineField({
 			name: 'description',
 			type: 'array',
-			of: [{ type: 'block' }],
+			of: [
+				{
+					type: 'block',
+					styles: [{ title: 'Normal', value: 'normal' }],
+				},
+			],
 		}),
 		defineField({
 			name: 'category',
