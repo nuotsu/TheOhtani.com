@@ -1,5 +1,8 @@
 import { createClient } from '@sanity/client'
-import { PUBLIC_SANITY_PROJECT_ID } from '$env/static/public'
+import {
+	PUBLIC_SANITY_PROJECT_ID,
+	PUBLIC_SANITY_TOKEN,
+} from '$env/static/public'
 import { dev } from '$app/environment'
 import imageUrlBuilder from '@sanity/image-url'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
@@ -11,6 +14,7 @@ export const client = createClient({
 	dataset: 'production',
 	apiVersion: '2024-04-01',
 	useCdn: !dev,
+	token: PUBLIC_SANITY_TOKEN,
 	perspective: dev ? 'previewDrafts' : 'published',
 })
 
