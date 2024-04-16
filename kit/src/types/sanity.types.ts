@@ -81,7 +81,7 @@ export type Chapter = {
   _updatedAt: string;
   _rev: string;
   orderRank?: string;
-  mainImage?: {
+  images?: Array<{
     asset?: {
       _ref: string;
       _type: "reference";
@@ -92,7 +92,8 @@ export type Chapter = {
     crop?: SanityImageCrop;
     prompt?: string;
     _type: "image";
-  };
+    _key: string;
+  }>;
 };
 
 export type SanityImageCrop = {
