@@ -1,3 +1,13 @@
+// documents
 import chapter from './chapter'
 
-export const schemaTypes = [chapter]
+// objects
+import video from './video'
+
+export const schemaTypes = [
+	// documents
+	chapter,
+
+	// objects
+	video,
+]

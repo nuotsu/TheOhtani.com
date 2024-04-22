@@ -74,6 +74,12 @@ export type Slug = {
   source?: string;
 };
 
+export type Video = {
+  _type: "video";
+  url?: string;
+  aspectRatio?: number;
+};
+
 export type Chapter = {
   _id: string;
   _type: "chapter";
@@ -81,7 +87,7 @@ export type Chapter = {
   _updatedAt: string;
   _rev: string;
   orderRank?: string;
-  images?: Array<{
+  image?: {
     asset?: {
       _ref: string;
       _type: "reference";
@@ -92,8 +98,40 @@ export type Chapter = {
     crop?: SanityImageCrop;
     prompt?: string;
     _type: "image";
+  };
+  content?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      annotation?: string;
+      _type: "ruby";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
     _key: string;
   }>;
+  isQuote?: boolean;
+  references?: Array<{
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+    _key: string;
+  } | ({
+    _key: string;
+  } & Video)>;
 };
 
 export type SanityImageCrop = {
