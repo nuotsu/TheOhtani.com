@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.carousel {
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+
+		&>* {
+			flex: 0 0 calc(min(var(--size, 300px), 80vw));
+			scroll-snap-align: center;
+		}
+	}
+}

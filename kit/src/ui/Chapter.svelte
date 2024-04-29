@@ -1,13 +1,18 @@
 <section
-	class="relative grid items-end md:*:col-span-full md:*:row-span-full overflow-x-clip"
+	class="relative grid items-end md:*:col-span-full md:*:row-span-full overflow-x-clip gap-8"
 >
 	{#if image}
-		<img src={urlFor(image).auto('format').url()} alt="" draggable={false} />
+		<img
+			class="w-full"
+			src={urlFor(image).auto('format').url()}
+			alt=""
+			draggable={false}
+		/>
 	{/if}
 
 	<div
 		class={cn(
-			'sticky bottom-0 p-4 md:p-8 text-center text-shadow md:text-lg [text-shadow:0_1px_1px_#0008]',
+			'sticky bottom-0 p-4 md:p-8 text-center text-shadow text-lg md:text-xl [text-shadow:0_1px_1px_#0008]',
 			isQuote && 'text-yellow-300',
 		)}
 	>

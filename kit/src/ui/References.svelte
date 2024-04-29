@@ -1,12 +1,9 @@
-<div
-	class="absolute inset-0 left-auto ml-auto p-4 transition-all h-full flex flex-col *:sticky *:top-0 overflow-y-auto before:m-auto after:m-auto"
->
+<div class="carousel gap-4 !row-auto before:m-auto after:m-auto [--size:450px]">
 	{#each references as r}
 		{#if r._type === 'image'}
-			<!--  -->
+			image
 		{:else if r._type === 'video'}
 			<iframe
-				class="w-[300px] md:w-[450px] shadow-xl rounded max-h-full"
 				style:aspect-ratio={r.aspectRatio}
 				src={r.url}
 				frameborder="0"
@@ -18,18 +15,22 @@
 
 <style>
 	div {
-		&:not(:hover) {
-			filter: blur(2px);
-			opacity: 0.6;
-			scale: 0.5;
+		view-timeline-name: --reference;
+		animation-timeline: --reference;
+		animation-name: reference;
+		animation-duration: 1s;
+		animation-range: entry 50% entry 110%;
+		animation-fill-mode: both;
 
-			@media (min-width: 769px) {
-				translate: 60%;
-			}
+		@media (max-width: 768px) {
+			animation-range: entry 100% entry 200%;
+		}
+	}
 
-			& > * {
-				pointer-events: none;
-			}
+	@keyframes reference {
+		from {
+			opacity: 0;
+			scale: 0.8;
 		}
 	}
 </style>
