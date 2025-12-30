@@ -1,38 +1,52 @@
-# sv
+# [TheOhtani.com](https://theohtani.com)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Sections
 
-## Creating a project
+- About / Intro
+- Childhood
+  - マンダラチャート
+- Teams
+  - Nippon Ham Fighters
+  - Team Japan
+  - Los Angeles Angels
+  - Los Angeles Dodgers
+- Records
+  - Two-way player
+  - 50/50 season
+  - 40/40 club
+  - Unanimous MVP (3x)
+  - HR leader as pitcher
+  - Most HR by Japanese player
+  - AL HR title (2023)
+  - Both leagues MVP
+  - All-Star pitcher + hitter
+  - $700M contract
+  - World Series champion
+  - Rookie of the Year
+  - Commissioner's Achievement Award
+  - Fastest to 40/40
+  - Most HR at Dodger Stadium
+  - 6 straight 50+ HR seasons
+  - Guinness World Records (2x)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Ideas
 
-```sh
-# create a new project in the current directory
-npx sv create
+- stats (season, career)
+  - data viz
+- bobblehead index
+- routines (hitting, pitching, pre-game, sleep, etc)
+- words that describe ohtani
+  - unicorn
+  - GOAT
+  - humble
+  - stoic
+- Faces
+  - face tracker
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Inspiration / Moodboard
 
-## Developing
+- https://s-2k.webflow.io
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Personal Goal
 
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> Win Awwwards Site of the Day

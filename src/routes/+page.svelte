@@ -1,2 +1,3 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<h1>TheOhtani.com</h1>
+<p>by <a href="https://nuotsu.dev">nuotsu</a></p>
+<p>Coming soon...</p>
