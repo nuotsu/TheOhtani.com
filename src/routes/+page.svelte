@@ -1,6 +1,9 @@
-<header class="contents">
-	<h1 class="col-span-6">TheOhtani.com</h1>
+<script lang="ts">
+	import Intro from './intro.svelte'
+</script>
 
-	<p class="col-span-6">by <a href="https://nuotsu.dev">nuotsu</a></p>
-	<p class="col-span-6 md:col-start-7">Coming soon...</p>
-</header>
+<Intro />
+
+<section class="col-[bleed] min-h-lvh place-content-center canvas p-lh text-center">
+	<i>Coming soon...</i>
+</section>

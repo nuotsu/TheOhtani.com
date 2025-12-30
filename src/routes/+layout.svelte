@@ -8,12 +8,16 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+
+	<meta name="theme-color" content="#000" />
 </svelte:head>
 
-<main class="col-span-full grid grid-cols-subgrid gap-lh">
+<!-- <Facade /> -->
+
+<main class="col-[bleed] grid grid-cols-subgrid">
 	{@render children()}
 </main>
 
-<fieldset class="col-span-full">
+<fieldset class="col-[bleed] canvas bg-neutral-100 p-lh font-mono">
 	<ShowGrid />
 </fieldset>

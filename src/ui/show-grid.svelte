@@ -1,12 +1,16 @@
-<label class="group">
-	<input id="show-grid-system" type="checkbox" />
-	<span class="group-has-checked:hidden">Show</span>
-	<span class="group-not-has-checked:hidden">Hide</span>
-	grid system
+<script lang="ts">
+	let checked = $state(false)
+</script>
+
+<svelte:window on:keydown={(e) => e.key === 'g' && (checked = !checked)} />
+
+<label class="has-checked:line-through">
+	<input id="show-grid-system" type="checkbox" bind:checked hidden />
+	Show <u class="decoration-current/50">g</u>rid system
 </label>
 
-<figure class="pointer-events-none fixed inset-0 grid-system px-lh">
-	{#each Array(12) as _, i}
+<figure class="pointer-events-none fixed inset-0 grid-system before:m-auto after:m-auto">
+	{#each Array(4) as _, i}
 		<div class="bg-neutral-400/5 {i >= 6 && 'max-md:hidden'}"></div>
 	{/each}
 </figure>
@@ -16,7 +20,11 @@
 		display: none;
 	}
 
-	:global(body:has(#show-grid-system:checked) [class*='col-span-']) {
+	:global(body:has(#show-grid-system:checked) [class*='col-']:not(.grid)) {
 		outline: 0.5px solid color-mix(in srgb, var(--color-neutral-400) 25%, transparent);
+	}
+
+	u {
+		text-decoration-skip-ink: none;
 	}
 </style>

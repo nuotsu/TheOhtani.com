@@ -2,6 +2,9 @@
 @import 'tailwindcss';
 
 @theme {
+	--color-background: #000;
+	--color-foreground: #fff;
+
 	--font-sans: 'Geist', sans-serif;
 	--font-serif: 'Instrument Serif', serif;
 	--font-mono: 'Geist Mono', monospace;
@@ -14,11 +17,32 @@
 }
 
 @layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
 	label {
 		cursor: pointer;
+	}
+
+	.grid {
+		gap: inherit;
 	}
 }
 
 @utility grid-system {
-	@apply grid grid-cols-6 gap-lh md:grid-cols-12;
+	grid-template-columns:
+		[bleed-start] 0px [content-start] repeat(var(--columns, 4), minmax(0px, 1fr))
+		[content-end] 0px [bleed-end];
+
+	@apply grid gap-x-lh;
+}
+
+@utility canvas {
+	@apply bg-foreground text-background;
+}
+
+@utility text-trim {
+	text-box-trim: trim-both;
+	text-box-edge: cap alphabetic;
 }
