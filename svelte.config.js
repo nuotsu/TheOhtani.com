@@ -11,6 +11,9 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$ui: 'src/ui'
+		},
+		paths: {
+			relative: false // Required for PostHog session replay to work correctly
 		}
 	}
 }
