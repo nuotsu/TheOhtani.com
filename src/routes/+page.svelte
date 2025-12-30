@@ -1,17 +1,19 @@
 <script lang="ts">
-	import Intro from './intro.svelte'
+	import Hero from '$ui/0-hero/section.svelte'
+	import O from '$ui/1-O/section.svelte'
+	import H from '$ui/2-H/section.svelte'
+	import T from '$ui/3-T/section.svelte'
+	import A from '$ui/4-A/section.svelte'
+	import N from '$ui/5-N/section.svelte'
+	import I from '$ui/6-I/section.svelte'
 </script>
 
-<main class="col-[bleed] grid grid-cols-subgrid">
-	<Intro />
-
-	<section class="col-[bleed] min-h-svh place-content-center canvas p-lh text-center">
-		<i>Coming soon...</i>
-	</section>
+<main>
+	<Hero />
+	<O />
+	<H />
+	<T />
+	<A />
+	<N />
+	<I />
 </main>
-
-<style>
-	section {
-		position: relative;
-	}
-</style>

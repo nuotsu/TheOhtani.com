@@ -20,12 +20,10 @@
 	<title>TheOhtani.com</title>
 	<meta
 		name="description"
-		content="A special tribute to the greatest player in the history of baseball, Shohei Ohtani."
+		content="Shohei Ohtani: the player who redefined impossible. A digital monument to the greatest player of all time."
 	/>
 	<meta name="theme-color" content="#000" />
 </svelte:head>
-
-<!-- <Facade /> -->
 
 {@render children()}
 

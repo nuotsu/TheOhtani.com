@@ -2,10 +2,12 @@
 	const { class: className = '' } = $props()
 
 	const links = [
-		{ href: '#about', label: 'About' },
-		{ href: '#childhood', label: 'Childhood' },
-		{ href: '#teams', label: 'Teams' },
-		{ href: '#records', label: 'Records' },
+		{ href: '#one-of-one', label: 'One of One' },
+		{ href: '#humble-beginnings', label: 'Humble Beginnings' },
+		{ href: '#testament', label: 'Testament' },
+		{ href: '#ascension', label: 'Ascension' },
+		{ href: '#numbers', label: 'Numbers' },
+		{ href: '#icon', label: 'Icon' },
 	]
 </script>
 

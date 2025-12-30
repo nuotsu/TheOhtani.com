@@ -26,22 +26,6 @@
 	label {
 		cursor: pointer;
 	}
-
-	.grid {
-		gap: inherit;
-	}
-}
-
-@utility grid-system {
-	grid-template-columns:
-		[bleed-start] 0px [content-start] repeat(var(--columns, 4), minmax(0px, 1fr))
-		[content-end] 0px [bleed-end];
-
-	@apply grid gap-x-lh;
-}
-
-@utility canvas {
-	@apply bg-foreground text-background;
 }
 
 @utility text-trim {

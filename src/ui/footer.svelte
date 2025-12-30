@@ -1,25 +1,22 @@
-<script lang="ts">
-	import ShowGrid from '$ui/show-grid.svelte'
-</script>
+<footer>
+	<p>One of one. Two-way. Forever. This is The Ohtani.</p>
 
-<footer class="col-[bleed] grid grid-cols-subgrid border-t-[.5px] border-background/10 canvas p-lh">
-	<div class="col-[content] grid grid-cols-subgrid gap-y-lh *:max-md:col-span-full">
-		<p>Created by <a href="https://nuotsu.dev">nuotsu</a></p>
+	<menu>
+		<li><button>Share this tribute</button></li>
+		<!-- <li><button>Vote on Awwwards</button></li> -->
+		<li><a href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
+	</menu>
 
-		<div>
-			<h2>Inspiration & Credits</h2>
-			<ul>
-				<li>
-					<a href="https://s-2k.webflow.io">S-2K</a>
-				</li>
-			</ul>
-		</div>
+	<p>Created by <a href="https://nuotsu.dev">nuotsu</a></p>
 
-		<fieldset class="">
-			<legend>Controls</legend>
-			<ShowGrid />
-		</fieldset>
-
-		<small class="mt-auto text-base">© 2025. All rights reserved.</small>
+	<div>
+		<h2>Inspiration & Credits</h2>
+		<ul>
+			<li>
+				<a href="https://s-2k.webflow.io">S-2K</a>
+			</li>
+		</ul>
 	</div>
+
+	<small>© 2025. All rights reserved.</small>
 </footer>

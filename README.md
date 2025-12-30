@@ -2,32 +2,14 @@
 
 ## Sections
 
-- About / Intro
-- Childhood
-  - マンダラチャート
-- Teams
-  - Hokkaidō Nippon-Ham Fighters
-  - Team Japan
-  - Los Angeles Angels
-  - Los Angeles Dodgers
-- Records
-  - Two-way player
-  - 50/50 season
-  - 40/40 club
-  - Unanimous MVP (3x)
-  - HR leader as pitcher
-  - Most HR by Japanese player
-  - AL HR title (2023)
-  - Both leagues MVP
-  - All-Star pitcher + hitter
-  - $700M contract
-  - World Series champion
-  - Rookie of the Year
-  - Commissioner's Achievement Award
-  - Fastest to 40/40
-  - Most HR at Dodger Stadium
-  - 6 straight 50+ HR seasons
-  - Guinness World Records (2x)
+0. Hero
+
+1. **O**ne of One
+2. **H**umble Beginnings
+3. **T**estament
+4. **A**scension
+5. **N**umbers
+6. **I**con
 
 ## Ideas
 
@@ -48,6 +30,7 @@
   - A to Z of Ohtani
 - bento box
 - image filters (aged MLB photos)
+- Ohtani merch (his brand, New Balance, Boss, SEIKO, etc)
 
 ## Inspiration / Moodboard
 
@@ -55,5 +38,7 @@
 
 ## Personal Goal
 
-- win Awwwards Site of the Day
+- earn recognition
+  - Awwwards Site of the Day
+  - CSS Design Awards
 - get noticed by _senpai_
