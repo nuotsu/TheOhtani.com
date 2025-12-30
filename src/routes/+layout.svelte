@@ -1,10 +1,10 @@
 <script lang="ts">
+	import { browser } from '$app/environment'
+	import { afterNavigate, beforeNavigate } from '$app/navigation'
 	import favicon from '$lib/assets/favicon.svg'
 	import ShowGrid from '$ui/show-grid.svelte'
-	import './app.css'
-	import { browser } from '$app/environment'
-	import { beforeNavigate, afterNavigate } from '$app/navigation'
 	import posthog from 'posthog-js'
+	import './app.css'
 
 	let { children } = $props()
 
@@ -22,16 +22,8 @@
 
 <!-- <Facade /> -->
 
-<main class="col-[bleed] grid grid-cols-subgrid">
-	{@render children()}
-</main>
+{@render children()}
 
 <fieldset class="col-[bleed] canvas bg-neutral-100 p-lh font-mono">
 	<ShowGrid />
 </fieldset>
-
-<style>
-	main :global(> section) {
-		position: relative;
-	}
-</style>

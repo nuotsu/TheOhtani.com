@@ -29,6 +29,7 @@
 		"vite": "^7.2.6"
 	},
 	"dependencies": {
+		"@ianvs/prettier-plugin-sort-imports": "^4.7.0",
 		"posthog-js": "^1.311.0",
 		"posthog-node": "^5.18.0"
 	}

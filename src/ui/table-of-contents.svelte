@@ -5,7 +5,7 @@
 		{ href: '#about', label: 'About' },
 		{ href: '#childhood', label: 'Childhood' },
 		{ href: '#teams', label: 'Teams' },
-		{ href: '#records', label: 'Records' }
+		{ href: '#records', label: 'Records' },
 	]
 </script>
 

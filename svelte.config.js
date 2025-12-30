@@ -10,12 +10,12 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$ui: 'src/ui'
+			$ui: 'src/ui',
 		},
 		paths: {
-			relative: false // Required for PostHog session replay to work correctly
-		}
-	}
+			relative: false, // Required for PostHog session replay to work correctly
+		},
+	},
 }
 
 export default config
