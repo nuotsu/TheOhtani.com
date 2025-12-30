@@ -9,4 +9,6 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children()}
+<main class="col-span-full grid grid-cols-subgrid gap-lh">
+	{@render children()}
+</main>

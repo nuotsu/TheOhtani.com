@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+@theme {
+	--color-dodger-blue: #005a9d;
+	--color-dodger-red: #ef3e42;
+
+	--spacing-ch: 1ch;
+	--spacing-lh: 1lh;
+}

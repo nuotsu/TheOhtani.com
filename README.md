@@ -6,7 +6,7 @@
 - Childhood
   - マンダラチャート
 - Teams
-  - Nippon Ham Fighters
+  - Hokkaidō Nippon-Ham Fighters
   - Team Japan
   - Los Angeles Angels
   - Los Angeles Dodgers
@@ -31,6 +31,8 @@
 
 ## Ideas
 
+- grid system (12-columns)
+- GSAP
 - stats (season, career)
   - data viz
 - bobblehead index
@@ -42,6 +44,10 @@
   - stoic
 - Faces
   - face tracker
+- glossary (keywords)
+  - A to Z of Ohtani
+- bento box
+- image filters (aged MLB photos)
 
 ## Inspiration / Moodboard
 
@@ -49,4 +55,5 @@
 
 ## Personal Goal
 
-> Win Awwwards Site of the Day
+- win Awwwards Site of the Day
+- get noticed by _senpai_
