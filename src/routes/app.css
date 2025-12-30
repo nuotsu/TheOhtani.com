@@ -1,9 +1,24 @@
+@import url('./fonts.css');
 @import 'tailwindcss';
 
 @theme {
+	--font-sans: 'Geist', sans-serif;
+	--font-serif: 'Instrument Serif', serif;
+	--font-mono: 'Geist Mono', monospace;
+
 	--color-dodger-blue: #005a9d;
 	--color-dodger-red: #ef3e42;
 
 	--spacing-ch: 1ch;
 	--spacing-lh: 1lh;
+}
+
+@layer base {
+	label {
+		cursor: pointer;
+	}
+}
+
+@utility grid-system {
+	@apply grid grid-cols-6 gap-lh md:grid-cols-12;
 }
