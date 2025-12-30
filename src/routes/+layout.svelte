@@ -1,7 +1,7 @@
 <script lang="ts">
-	import './app.css'
-	import ShowGrid from '$ui/show-grid.svelte'
 	import favicon from '$lib/assets/favicon.svg'
+	import ShowGrid from '$ui/show-grid.svelte'
+	import './app.css'
 
 	let { children } = $props()
 </script>
@@ -21,3 +21,9 @@
 <fieldset class="col-[bleed] canvas bg-neutral-100 p-lh font-mono">
 	<ShowGrid />
 </fieldset>
+
+<style>
+	main :global(> section) {
+		position: relative;
+	}
+</style>

@@ -1,11 +1,17 @@
-<header class="col-[content] grid min-h-lvh grid-cols-subgrid gap-y-lh overflow-y-clip pt-ch pb-lh">
+<script lang="ts">
+	import TableOfContents from '$ui/table-of-contents.svelte'
+</script>
+
+<header
+	class="sticky top-0 col-[content] grid min-h-svh grid-cols-subgrid gap-y-lh overflow-y-clip pt-ch pb-lh"
+>
 	<nav class="relative col-span-full row-[1/2]">
 		<a href="/">TheOhtani.com</a>
 	</nav>
 
 	<hgroup class="relative z-1 col-[1/4] row-[2/3] md:col-[1/3]">
 		<h1 class="flex flex-col">
-			<span class="leading-0 uppercase">Shohei</span>
+			<i class="leading-0 uppercase">Shohei</i>
 			<span class="font-serif text-[25vw] leading-none uppercase md:text-[10rem]">Ohtani</span>
 		</h1>
 		<h2 class="text-pretty">A tribute to the greatest player in the history of baseball.</h2>
@@ -20,22 +26,7 @@
 		</b>
 	</div>
 
-	<nav class="col-[1/3] row-[3/4] mt-auto">
-		<ol>
-			<li>
-				<a href="#about">About</a>
-			</li>
-			<li>
-				<a href="#childhood">Childhood</a>
-			</li>
-			<li>
-				<a href="#teams">Teams</a>
-			</li>
-			<li>
-				<a href="#records">Records</a>
-			</li>
-		</ol>
-	</nav>
+	<TableOfContents class="col-[1/3] row-[3/4] mt-auto" />
 </header>
 
 <style>

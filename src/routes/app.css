@@ -16,6 +16,8 @@
 	--spacing-lh: 1lh;
 }
 
+@custom-variant hover (&:hover);
+
 @layer base {
 	html {
 		scroll-behavior: smooth;
