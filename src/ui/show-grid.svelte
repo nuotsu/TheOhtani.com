@@ -6,12 +6,12 @@
 
 <label class="has-checked:line-through">
 	<input id="show-grid-system" type="checkbox" bind:checked hidden />
-	Show <u class="decoration-current/50">g</u>rid system
+	Show <u class="decoration-current/25">g</u>rid system
 </label>
 
 <figure class="pointer-events-none fixed inset-0 grid-system before:m-auto after:m-auto">
 	{#each Array(4) as _, i}
-		<div class="bg-neutral-400/5 {i >= 6 && 'max-md:hidden'}"></div>
+		<div class="bg-neutral-400/10 {i >= 6 && 'max-md:hidden'}"></div>
 	{/each}
 </figure>
 

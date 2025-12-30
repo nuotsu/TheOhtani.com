@@ -14,7 +14,9 @@
 			<i class="leading-0 uppercase">Shohei</i>
 			<span class="font-serif text-[25vw] leading-none uppercase md:text-[10rem]">Ohtani</span>
 		</h1>
-		<h2 class="text-pretty">A tribute to the greatest player in the history of baseball.</h2>
+		<h2 class="text-pretty">
+			A special tribute to the greatest player in the history of baseball.
+		</h2>
 	</hgroup>
 
 	<div class="col-[3/-1] row-[2/4] flex items-end justify-end text-right">

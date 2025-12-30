@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment'
 	import { afterNavigate, beforeNavigate } from '$app/navigation'
 	import favicon from '$lib/assets/favicon.svg'
-	import ShowGrid from '$ui/show-grid.svelte'
+	import Footer from '$ui/footer.svelte'
 	import posthog from 'posthog-js'
 	import './app.css'
 
@@ -17,6 +17,11 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 
+	<title>TheOhtani.com</title>
+	<meta
+		name="description"
+		content="A special tribute to the greatest player in the history of baseball, Shohei Ohtani."
+	/>
 	<meta name="theme-color" content="#000" />
 </svelte:head>
 
@@ -24,6 +29,4 @@
 
 {@render children()}
 
-<fieldset class="col-[bleed] canvas bg-neutral-100 p-lh font-mono">
-	<ShowGrid />
-</fieldset>
+<Footer />
