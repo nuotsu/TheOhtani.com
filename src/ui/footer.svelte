@@ -1,9 +1,9 @@
-<footer>
-	<p>One of one. Two-way. Forever. This is The Ohtani.</p>
+<footer class="grid-system min-h-lvh">
+	<p>This is The Ohtani.</p>
 
 	<menu>
 		<li><button>Share this tribute</button></li>
-		<!-- <li><button>Vote on Awwwards</button></li> -->
+		<!-- <li><button>View on Awwwards</button></li> -->
 		<li><a href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
 	</menu>
 

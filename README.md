@@ -20,8 +20,8 @@
 - bobblehead index
 - routines (hitting, pitching, pre-game, sleep, etc)
 - words that describe ohtani
-  - unicorn
-  - GOAT
+  - unicorn 🦄🦄🦄
+  - GOAT 🐐🐐🐐
   - humble
   - stoic
 - Faces

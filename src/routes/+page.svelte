@@ -1,15 +1,17 @@
 <script lang="ts">
 	import Hero from '$ui/0-hero/section.svelte'
-	import O from '$ui/1-O/section.svelte'
-	import H from '$ui/2-H/section.svelte'
-	import T from '$ui/3-T/section.svelte'
-	import A from '$ui/4-A/section.svelte'
-	import N from '$ui/5-N/section.svelte'
-	import I from '$ui/6-I/section.svelte'
+	import O from '$ui/1-one-of-one/section.svelte'
+	import H from '$ui/2-humble-beginnings/section.svelte'
+	import T from '$ui/3-testament/section.svelte'
+	import A from '$ui/4-ascension/section.svelte'
+	import N from '$ui/5-numbers/section.svelte'
+	import I from '$ui/6-icon/section.svelte'
+	import Footer from '$ui/footer.svelte'
 </script>
 
+<Hero />
+
 <main>
-	<Hero />
 	<O />
 	<H />
 	<T />
@@ -17,3 +19,11 @@
 	<N />
 	<I />
 </main>
+
+<Footer />
+
+<style>
+	main :global(section) {
+		min-height: 100lvh;
+	}
+</style>

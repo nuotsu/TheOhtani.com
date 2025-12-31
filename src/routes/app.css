@@ -28,6 +28,10 @@
 	}
 }
 
+@utility grid-system {
+	@apply grid grid-cols-4 gap-lh;
+}
+
 @utility text-trim {
 	text-box-trim: trim-both;
 	text-box-edge: cap alphabetic;

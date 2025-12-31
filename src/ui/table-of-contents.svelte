@@ -1,21 +1,15 @@
 <script lang="ts">
-	const { class: className = '' } = $props()
-
-	const links = [
-		{ href: '#one-of-one', label: 'One of One' },
-		{ href: '#humble-beginnings', label: 'Humble Beginnings' },
-		{ href: '#testament', label: 'Testament' },
-		{ href: '#ascension', label: 'Ascension' },
-		{ href: '#numbers', label: 'Numbers' },
-		{ href: '#icon', label: 'Icon' },
-	]
+	import links from '$lib/links'
 </script>
 
-<nav class={className}>
-	<ol class="max-w-max">
+<nav>
+	<ol class="grid max-w-max grid-cols-[auto_auto]">
 		{#each links as link}
-			<li>
-				<a class="flex not-hover:transition-opacity hover:opacity-100" href={link.href}>
+			<li class="col-span-full grid grid-cols-subgrid">
+				<a
+					class="col-span-full grid grid-cols-subgrid gap-ch not-hover:transition-opacity hover:opacity-100"
+					href={link.href}
+				>
 					{link.label}
 				</a>
 			</li>
@@ -26,5 +20,16 @@
 <style>
 	ol:has(a:hover) a:not(:hover) {
 		opacity: 0.5;
+	}
+
+	li {
+		counter-increment: i;
+
+		a {
+			&::before {
+				content: counter(i, upper-roman);
+				text-align: center;
+			}
+		}
 	}
 </style>

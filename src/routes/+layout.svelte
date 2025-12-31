@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment'
 	import { afterNavigate, beforeNavigate } from '$app/navigation'
 	import favicon from '$lib/assets/favicon.svg'
-	import Footer from '$ui/footer.svelte'
+	import Shortcuts from '$ui/shortcuts.svelte'
 	import posthog from 'posthog-js'
 	import './app.css'
 
@@ -25,6 +25,6 @@
 	<meta name="theme-color" content="#000" />
 </svelte:head>
 
-{@render children()}
+<Shortcuts />
 
-<Footer />
+{@render children()}

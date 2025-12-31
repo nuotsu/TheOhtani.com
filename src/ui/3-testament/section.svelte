@@ -1,5 +1,6 @@
-<section id="testament">
-	<h2>Testament</h2>
+<section id="testament" class="grid-system">
+	<h2 class="col-span-full">Testament</h2>
+
 	<p>
 		Hokkaido Nippon-Ham Fighters, 2013. Drafted first overall. MLB teams beckoned immediately, but
 		manager Hideki Kuriyama saw something rare: potential meeting patience.

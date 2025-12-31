@@ -1,5 +1,6 @@
-<section id="icon">
-	<h2>Icon</h2>
+<section id="icon" class="grid-system">
+	<h2 class="col-span-full">Icon</h2>
+
 	<p>
 		Beyond the statistics and the highlights, Shohei Ohtani has become an icon—a symbol of what's
 		possible when you refuse to accept limitations.
@@ -17,5 +18,5 @@
 		extraordinary while remaining yourself.
 	</p>
 
-	<p>And tthe story continues...</p>
+	<p>And the story continues...</p>
 </section>
