@@ -33,7 +33,7 @@
 	]
 </script>
 
-<section id="ascension" class="grid-system">
+<section id="ascension" class="grid-system p-lh">
 	<h2>Ascension</h2>
 
 	<dl class="grid grid-cols-[auto_1fr] gap-ch">

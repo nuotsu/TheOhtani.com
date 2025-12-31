@@ -1,4 +1,4 @@
-<section id="testament" class="grid-system">
+<section id="testament" class="grid-system p-lh">
 	<h2 class="col-span-full">Testament</h2>
 
 	<p>

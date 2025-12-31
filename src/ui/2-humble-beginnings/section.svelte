@@ -1,4 +1,4 @@
-<section id="humble-beginnings" class="grid-system">
+<section id="humble-beginnings" class="grid-system p-lh">
 	<h2 class="col-span-full">Humble Beginnings</h2>
 
 	<p>

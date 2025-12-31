@@ -23,8 +23,14 @@
 		scroll-behavior: smooth;
 	}
 
+	button,
 	label {
 		cursor: pointer;
+	}
+
+	kbd {
+		@apply font-sans underline;
+		text-decoration-skip-ink: none;
 	}
 }
 

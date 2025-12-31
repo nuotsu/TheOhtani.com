@@ -1,4 +1,4 @@
-export default [
+export const links = [
 	{ href: '#one-of-one', label: 'One of One' },
 	{ href: '#humble-beginnings', label: 'Humble Beginnings' },
 	{ href: '#testament', label: 'Testament' },

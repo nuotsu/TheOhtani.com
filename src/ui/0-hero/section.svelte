@@ -1,10 +1,7 @@
-<script lang="ts">
-	import TableOfContents from '$ui/table-of-contents.svelte'
-</script>
+<header class="grid-system min-h-lvh p-lh">
+	<h1 class="col-span-2 mt-auto">Shohei Ohtani</h1>
 
-<header class="grid-system min-h-lvh">
-	<h1>Shohei Ohtani</h1>
-	<p>The player who redefined impossible. A digital monument to the greatest player of all time.</p>
-
-	<TableOfContents />
+	<p class="col-span-2 mt-auto">
+		The player who redefined impossible. A digital monument to the greatest player of all time.
+	</p>
 </header>

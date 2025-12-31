@@ -23,7 +23,7 @@
 	}
 </script>
 
-<section id="numbers" class="grid-system">
+<section id="numbers" class="grid-system p-lh">
 	<h2>Numbers</h2>
 	<p>
 		The digits that define dominance. The statistics that shattered expectations. The records that

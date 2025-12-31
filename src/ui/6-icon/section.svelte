@@ -1,4 +1,4 @@
-<section id="icon" class="grid-system">
+<section id="icon" class="grid-system p-lh">
 	<h2 class="col-span-full">Icon</h2>
 
 	<p>
