@@ -1,4 +1,12 @@
-<section id="testament" class="grid-system p-lh">
+<script lang="ts">
+	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+</script>
+
+<section
+	id="testament"
+	class="grid-system p-lh"
+	{@attach intersectionObserver(...activateTableOfContents)}
+>
 	<h2 class="col-span-full">Testament</h2>
 
 	<p>

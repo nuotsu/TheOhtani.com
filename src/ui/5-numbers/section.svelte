@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+
 	const feats = {
 		'Most Unanimous MVPs':
 			'Ohtani has won all four of his MVP awards (2021 AL, 2023 AL, 2024 NL, 2025 NL) by a unanimous vote. The first and only player to win MVP in both the American and National Leagues, and second only to Barry Bonds (7) in total MVP awards.',
@@ -23,7 +25,11 @@
 	}
 </script>
 
-<section id="numbers" class="grid-system p-lh">
+<section
+	id="numbers"
+	class="grid-system p-lh"
+	{@attach intersectionObserver(...activateTableOfContents)}
+>
 	<h2>Numbers</h2>
 	<p>
 		The digits that define dominance. The statistics that shattered expectations. The records that

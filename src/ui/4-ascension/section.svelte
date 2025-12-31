@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+
 	const items = [
 		{
 			date: '2018',
@@ -33,7 +35,11 @@
 	]
 </script>
 
-<section id="ascension" class="grid-system p-lh">
+<section
+	id="ascension"
+	class="grid-system p-lh"
+	{@attach intersectionObserver(...activateTableOfContents)}
+>
 	<h2>Ascension</h2>
 
 	<dl class="grid grid-cols-[auto_1fr] gap-ch">

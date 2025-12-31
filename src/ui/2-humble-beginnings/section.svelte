@@ -1,4 +1,12 @@
-<section id="humble-beginnings" class="grid-system p-lh">
+<script lang="ts">
+	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+</script>
+
+<section
+	id="humble-beginnings"
+	class="grid-system p-lh"
+	{@attach intersectionObserver(...activateTableOfContents)}
+>
 	<h2 class="col-span-full">Humble Beginnings</h2>
 
 	<p>

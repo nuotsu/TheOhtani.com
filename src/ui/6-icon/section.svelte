@@ -1,4 +1,18 @@
-<section id="icon" class="grid-system p-lh">
+<script lang="ts">
+	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+
+	let innerHeight = $state(48)
+</script>
+
+<svelte:window bind:innerHeight />
+
+<section
+	id="icon"
+	class="grid-system p-lh"
+	{@attach intersectionObserver(activateTableOfContents[0], {
+		rootMargin: `-${innerHeight / 2}px 0px 0px 0px`,
+	})}
+>
 	<h2 class="col-span-full">Icon</h2>
 
 	<p>
