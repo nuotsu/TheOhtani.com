@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Share from '$ui/share.svelte'
 	import ShowGrid from '$ui/show-grid.svelte'
 </script>
 
@@ -6,13 +7,11 @@
 	<p>This is The Ohtani.</p>
 
 	<menu>
-		<li><button>Share this tribute</button></li>
-		<li><ShowGrid /></li>
+		<li><Share /></li>
 		<!-- <li><button>View on Awwwards</button></li> -->
 		<li><a href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
+		<li><ShowGrid /></li>
 	</menu>
-
-	<p>Created by <a href="https://nuotsu.dev">nuotsu</a></p>
 
 	<div>
 		<h2>Inspiration & Credits</h2>
@@ -22,6 +21,8 @@
 			</li>
 		</ul>
 	</div>
+
+	<p>Created by <a href="https://nuotsu.dev">nuotsu</a></p>
 
 	<small class="-col-end-1 mt-auto text-right">© 2025. All rights reserved.</small>
 </footer>
