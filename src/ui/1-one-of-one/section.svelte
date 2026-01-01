@@ -9,13 +9,15 @@
 	class="grid-system p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<h2 class="*:inline-block max-md:col-span-2">
-		<span>One of One.</span>
-		<span>Two-Way Player.</span>
-		<span><s>Three</s> Four-Time MVP.</span>
-	</h2>
+	<header class="max-md:col-span-full">
+		<h2 class="top-rlh h2 *:inline-block md:sticky">
+			<span>One of One.</span>
+			<span>Two-Way Player.</span>
+			<span><s>Three</s> Four-Time MVP.</span>
+		</h2>
+	</header>
 
-	<p class="max-md:col-[2/4]">
+	<p class="max-md:col-[2/-1] md:my-auto">
 		In the {years} years of Major League Baseball, there has never been another like him. A player who
 		dominates as both pitcher and hitter. Who makes the impossible routine. Who exists in a category entirely
 		his own.

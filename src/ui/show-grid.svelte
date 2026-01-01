@@ -9,7 +9,7 @@
 />
 
 <label class="has-checked:line-through">
-	<input type="checkbox" bind:checked hidden />
+	<input id="show-grid" type="checkbox" bind:checked hidden />
 	Show <kbd>g</kbd>rid
 </label>
 
@@ -20,7 +20,13 @@
 </figure>
 
 <style>
-	:global(body):not(:has(input:checked)) figure {
+	:global(body):not(:has(#show-grid:checked)) figure {
 		display: none;
+	}
+
+	:global(body:has(#show-grid:checked)) {
+		:global(.grid-system) {
+			outline: 0.5px solid color-mix(in srgb, currentColor 25%, transparent);
+		}
 	}
 </style>

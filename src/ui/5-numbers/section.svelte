@@ -30,17 +30,22 @@
 	class="grid-system p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<h2>Numbers</h2>
-	<p>
-		The digits that define dominance. The statistics that shattered expectations. The records that
-		will echo through eternity.
-	</p>
+	<header class="max-md:col-span-full">
+		<h2 class="top-rlh h2 md:sticky">Numbers.</h2>
+	</header>
 
-	<dl class="col-span-2 grid grid-cols-subgrid">
+	<div class="max-md:col-[2/-1]">
+		<p class="sticky top-rlh">
+			The digits that define dominance. The statistics that shattered expectations. The records that
+			will echo through eternity.
+		</p>
+	</div>
+
+	<dl class="col-span-full grid grid-cols-subgrid gap-lh md:col-span-2">
 		{#each Object.entries(feats) as [feat, value]}
 			<div class="col-span-full grid grid-cols-subgrid">
-				<dt class="text-right">{feat}</dt>
-				<dd>{value}</dd>
+				<dt class="text-right text-balance max-md:col-span-2">{feat}</dt>
+				<dd class="max-md:col-span-2">{value}</dd>
 			</div>
 		{/each}
 	</dl>

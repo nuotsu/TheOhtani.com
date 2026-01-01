@@ -3,8 +3,8 @@
 	import ShowGrid from '$ui/show-grid.svelte'
 </script>
 
-<footer id="footer" class="grid-system min-h-lvh p-lh">
-	<p>This is The Ohtani.</p>
+<footer id="footer" class="grid-system min-h-lvh p-lh *:max-md:col-span-full">
+	<h2 class="h2">The Ohtani.</h2>
 
 	<menu>
 		<li><Share /></li>
@@ -24,5 +24,13 @@
 
 	<p>Created by <a href="https://nuotsu.dev">nuotsu</a></p>
 
-	<small class="-col-end-1 mt-auto text-right">© 2025. All rights reserved.</small>
+	<small class="col-span-full mt-auto text-right">© 2025. All rights reserved.</small>
 </footer>
+
+<style>
+	@media (width < 48rem) {
+		footer {
+			grid-template-rows: auto auto auto 1fr;
+		}
+	}
+</style>

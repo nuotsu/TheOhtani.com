@@ -27,5 +27,9 @@
 <style>
 	main :global(section) {
 		min-height: 100lvh;
+
+		&:first-child {
+			margin-block-start: 50svh;
+		}
 	}
 </style>

@@ -40,9 +40,11 @@
 	class="grid-system p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<h2>Ascension</h2>
+	<header class="max-md:col-span-full">
+		<h2 class="sticky top-rlh h2">Ascension.</h2>
+	</header>
 
-	<dl class="grid grid-cols-[auto_1fr] gap-ch">
+	<dl class="col-span-full grid grid-cols-[auto_1fr] gap-ch md:col-span-2">
 		{#each items as item}
 			<div class="col-span-full grid grid-cols-subgrid">
 				<dt class="text-right">

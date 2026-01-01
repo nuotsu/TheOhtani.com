@@ -4,10 +4,12 @@
 
 <section
 	id="testament"
-	class="grid-system p-lh"
+	class="grid-system p-lh [&_p]:max-md:col-span-2"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<h2 class="col-span-full">Testament</h2>
+	<header class="row-span-2 max-md:col-span-full">
+		<h2 class="sticky top-rlh h2">Testament.</h2>
+	</header>
 
 	<p>
 		Hokkaido Nippon-Ham Fighters, 2013. Drafted first overall. MLB teams beckoned immediately, but
