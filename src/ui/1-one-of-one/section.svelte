@@ -11,7 +11,7 @@
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<header class="col-span-2 row-[1/2] max-md:col-span-full">
-		<h2 class="top-rlh h2 *:inline-block md:sticky">
+		<h2 class="top-rlh h2 *:block md:sticky">
 			<span>One of One.</span>
 			<span>Two-Way Player.</span>
 			<span><S>Three</S> Four-Time MVP.</span>

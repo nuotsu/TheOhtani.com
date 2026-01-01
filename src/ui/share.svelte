@@ -4,6 +4,7 @@
 
 {#if 'share' in navigator}
 	<button
+		class="link"
 		onclick={() => {
 			navigator.share({
 				title: 'TheOhtani.com',
@@ -16,6 +17,7 @@
 	</button>
 {:else if 'clipboard' in navigator}
 	<button
+		class="link"
 		onclick={() => {
 			navigator.clipboard.writeText(window.location.origin).then(() => {
 				copied = true

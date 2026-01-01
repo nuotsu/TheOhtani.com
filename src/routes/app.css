@@ -30,7 +30,7 @@
 	}
 
 	kbd {
-		@apply font-sans underline;
+		@apply font-sans underline decoration-current/25;
 		text-decoration-skip-ink: none;
 	}
 }
@@ -54,4 +54,10 @@
 @utility text-trim {
 	text-box-trim: trim-both;
 	text-box-edge: cap alphabetic;
+}
+
+/* components */
+
+@utility link {
+	@apply underline decoration-current/10 hover:decoration-current/50;
 }

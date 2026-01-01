@@ -35,6 +35,8 @@
 ## Inspiration / Moodboard
 
 - https://s-2k.webflow.io
+- https://newbalance-ohtani.com
+- https://mainichi.jp/english/graphs/20211118/hpe/00m/0sp/002000g/20211118hpe00m0sp031000q
 
 ## Personal Goal
 
