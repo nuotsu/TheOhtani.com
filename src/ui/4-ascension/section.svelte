@@ -37,7 +37,7 @@
 
 <section
 	id="ascension"
-	class="grid-system p-lh"
+	class="mb-[4lh] grid-system p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<header class="grid items-end max-md:col-span-full">
@@ -45,13 +45,13 @@
 	</header>
 
 	<dl
-		class="relative col-span-full grid grid-cols-[auto_1fr] gap-lh md:col-span-2"
+		class="relative col-span-full grid grid-cols-subgrid gap-lh md:col-span-2 md:grid-cols-[auto_1fr]"
 		style:--item-count={items.length}
 	>
 		{#each items as item, i}
 			<dt class="col-[1/2] text-right" style:grid-row="{i + 1} / {i + 2}">
 				<time
-					class="relative border-y-[.5lh] border-background bg-background tabular-nums"
+					class="relative block bg-background tabular-nums outline-[.5lh] outline-background"
 					datetime={item.date}>{item.date}</time
 				>
 			</dt>
@@ -64,7 +64,7 @@
 <style>
 	@property --timeline-progress {
 		syntax: '<percentage>';
-		initial-value: 100%;
+		initial-value: 0%;
 		inherits: false;
 	}
 
@@ -81,11 +81,12 @@
 	}
 
 	@keyframes line {
-		20% {
+		0%,
+		15% {
 			--timeline-progress: 100%;
 		}
 
-		60%,
+		70%,
 		100% {
 			--timeline-progress: 0%;
 		}
@@ -94,11 +95,15 @@
 	dd {
 		animation: fade ease-out;
 		animation-timeline: view();
+
+		&:not(:last-child) {
+			margin-bottom: 4lh;
+		}
 	}
 
 	@keyframes fade {
 		0%,
-		20% {
+		25% {
 			opacity: 0;
 		}
 

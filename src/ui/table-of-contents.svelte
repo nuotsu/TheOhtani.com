@@ -11,7 +11,9 @@
 						class="order-last transition-[opacity,translate] delay-(--delay) before:bg-current/50"
 					>
 						<span>
-							<kbd>{label.slice(0, 1)}</kbd>{label.slice(1)}
+							<kbd title={`Press "${label.slice(0, 1).toLowerCase()}" or "${i + 1}" to navigate`}
+								>{label.slice(0, 1)}</kbd
+							>{label.slice(1)}
 						</span>
 					</span>
 				</a>

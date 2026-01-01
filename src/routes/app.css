@@ -22,6 +22,7 @@
 @layer base {
 	html {
 		scroll-behavior: smooth;
+		@apply no-scrollbar;
 	}
 
 	button,
@@ -30,7 +31,11 @@
 	}
 
 	kbd {
-		@apply font-sans underline decoration-current/25;
+		@media (hover: hover) {
+			@apply underline;
+		}
+
+		@apply font-sans decoration-current/25;
 		text-decoration-skip-ink: none;
 		text-underline-offset: 0.4ch;
 	}
@@ -65,4 +70,14 @@
 
 @utility link {
 	@apply underline decoration-current/10 hover:decoration-current/50;
+}
+
+/* utilities */
+
+@utility no-scrollbar {
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }

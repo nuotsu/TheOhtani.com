@@ -100,21 +100,29 @@
 </section>
 
 <style>
-	dt {
+	dt,
+	dd {
 		animation: slide ease-out;
 		animation-timeline: view();
+
+		@supports (animation-timeline: view()) {
+			opacity: 0.5;
+		}
 	}
 
 	dd {
 		--x: 1lh;
-		animation: slide ease-out;
-		animation-timeline: view();
 	}
 
 	@keyframes slide {
 		0% {
 			translate: var(--x, -1lh) 0;
 			opacity: 0;
+			filter: blur(1ch);
+		}
+
+		25% {
+			filter: none;
 		}
 
 		50% {
