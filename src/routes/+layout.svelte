@@ -12,16 +12,22 @@
 		beforeNavigate(() => posthog.capture('$pageleave'))
 		afterNavigate(() => posthog.capture('$pageview'))
 	}
+
+	const metadata = {
+		title: 'The Ohtani',
+		description:
+			'Shohei Ohtani: the player who redefined impossible. A digital monument to the greatest player of all time.',
+	}
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 
-	<title>TheOhtani.com</title>
-	<meta
-		name="description"
-		content="Shohei Ohtani: the player who redefined impossible. A digital monument to the greatest player of all time."
-	/>
+	<title>{metadata.title}</title>
+	<meta name="description" content={metadata.description} />
+	<meta property="og:title" content={metadata.title} />
+	<meta property="og:description" content={metadata.description} />
+
 	<meta name="theme-color" content="#000" />
 </svelte:head>
 
