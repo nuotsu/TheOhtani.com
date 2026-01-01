@@ -40,8 +40,8 @@
 	class="grid-system p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<header class="max-md:col-span-full">
-		<h2 class="sticky top-rlh h2">Ascension.</h2>
+	<header class="grid items-end max-md:col-span-full">
+		<h2 class="bottom-rlh h2 md:sticky">Ascension.</h2>
 	</header>
 
 	<dl class="col-span-full grid grid-cols-[auto_1fr] gap-lh md:col-span-2">

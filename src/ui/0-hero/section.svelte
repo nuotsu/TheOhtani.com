@@ -6,7 +6,7 @@
 	<hgroup class="relative col-span-2 mt-auto max-w-max max-md:row-[2/3]">
 		<h1 class="flex flex-col uppercase">
 			Shohei
-			<span class="h1">Ohtani</span>
+			<span class="h0">Ohtani</span>
 		</h1>
 
 		<Signature class="absolute -right-lh bottom-0 h-[2lh] translate-1/2" />

@@ -9,7 +9,6 @@
 		children,
 		...props
 	}: {
-		class: string
 		children: Snippet
 		options?: IntersectionObserverInit
 	} & SVGAttributes<SVGSVGElement> = $props()

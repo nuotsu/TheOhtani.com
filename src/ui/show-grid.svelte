@@ -8,7 +8,7 @@
 	}}
 />
 
-<label class="has-checked:line-through">
+<label class="link has-checked:line-through has-checked:decoration-current">
 	<input id="show-grid" type="checkbox" bind:checked hidden />
 	Show <kbd>g</kbd>rid
 </label>
@@ -25,7 +25,7 @@
 	}
 
 	:global(body:has(#show-grid:checked)) {
-		:global(.grid-system) {
+		:global(.grid-system, [class*='col-'], [class*='row-']) {
 			outline: 0.5px solid color-mix(in srgb, currentColor 25%, transparent);
 		}
 	}

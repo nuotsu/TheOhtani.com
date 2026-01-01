@@ -6,10 +6,12 @@
 	import A from '$ui/4-ascension/section.svelte'
 	import N from '$ui/5-numbers/section.svelte'
 	import I from '$ui/6-icon/section.svelte'
+	import Facade from '$ui/facade.svelte'
 	import Footer from '$ui/footer.svelte'
 	import TableOfContents from '$ui/table-of-contents.svelte'
 </script>
 
+<Facade />
 <Hero />
 <TableOfContents />
 

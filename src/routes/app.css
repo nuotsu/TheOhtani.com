@@ -32,6 +32,7 @@
 	kbd {
 		@apply font-sans underline decoration-current/25;
 		text-decoration-skip-ink: none;
+		text-underline-offset: 0.4ch;
 	}
 }
 
@@ -43,8 +44,12 @@
 
 /* typography */
 
-@utility h1 {
+@utility h0 {
 	@apply font-serif text-7xl;
+}
+
+@utility h1 {
+	@apply font-serif text-5xl;
 }
 
 @utility h2 {

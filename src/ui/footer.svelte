@@ -11,7 +11,7 @@
 
 <footer
 	id="footer"
-	class="grid-system min-h-lvh bg-foreground p-lh text-background *:max-md:col-span-full"
+	class="relative z-1 grid-system min-h-lvh bg-foreground p-lh text-background *:max-md:col-span-full"
 >
 	<div>
 		<hgroup class="relative max-w-max">
@@ -28,7 +28,7 @@
 	</menu>
 
 	<div>
-		<h2>Inspiration & Credits</h2>
+		<h2>Inspiration & Credits:</h2>
 		<ul>
 			{#each inspiration as { label, href }}
 				<li>

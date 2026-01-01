@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+	import P from '$ui/paragraph-reveal.svelte'
 	import S from '$ui/strikethrough.svelte'
-
-	const years = new Date().getFullYear() - 1876
 </script>
 
 <section
@@ -10,17 +9,21 @@
 	class="grid-system p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<header class="col-span-2 row-[1/2] max-md:col-span-full">
-		<h2 class="top-rlh h2 *:block md:sticky">
-			<span>One of One.</span>
-			<span>Two-Way Player.</span>
-			<span><S>Three</S> Four-Time MVP.</span>
-		</h2>
-	</header>
+	<h2 class="col-span-full text-center h1">
+		One of One.<br />
+		Two-Way Player.<br />
+		<S>Three</S> Four-Time MVP.
+	</h2>
 
-	<p class="col-[2/-1] row-[2/3] md:col-[2/-2]">
-		In the {years} years of Major League Baseball, there has never been another like him. A player who
-		dominates as both pitcher and hitter. Who makes the impossible routine. Who exists in a category entirely
-		his own.
-	</p>
+	<P
+		class="col-span-full text-center text-xl leading-relaxed md:col-[2/-2]"
+		options={{
+			start: 'top 90%',
+			end: 'top 30%',
+		}}
+	>
+		In the {new Date().getFullYear() - 1876} years of Major League Baseball, there has never been another
+		like him. A player who dominates as both pitcher and hitter. Who makes the impossible routine. Who
+		exists in a category entirely his own.
+	</P>
 </section>

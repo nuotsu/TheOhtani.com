@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+	import P from '$ui/paragraph-reveal.svelte'
 
 	let innerHeight = $state(48)
 </script>
@@ -9,9 +10,7 @@
 <section
 	id="icon"
 	class="grid-system p-lh"
-	{@attach intersectionObserver(activateTableOfContents[0], {
-		rootMargin: `-${innerHeight / 2}px 0px 0px 0px`,
-	})}
+	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<h2 class="top-rlh col-span-full h2 md:sticky">Icon.</h2>
 
@@ -32,5 +31,5 @@
 		extraordinary while remaining yourself.
 	</p>
 
-	<p class="col-span-full text-center">And the story continues...</p>
+	<P class="col-span-full text-center text-lg">And the story continues...</P>
 </section>

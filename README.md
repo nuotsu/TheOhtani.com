@@ -40,6 +40,7 @@
 
 ## Personal Goal
 
+- submit to Svelte.dev
 - earn recognition
   - Awwwards Site of the Day
   - CSS Design Awards
