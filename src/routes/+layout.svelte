@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
 	import { afterNavigate, beforeNavigate } from '$app/navigation'
-	import favicon from '$lib/assets/favicon.svg'
+	import favicon from '$assets/favicon.svg'
 	import Shortcuts from '$ui/shortcuts.svelte'
 	import posthog from 'posthog-js'
 	import './app.css'

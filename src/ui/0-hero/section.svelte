@@ -1,8 +1,16 @@
+<script lang="ts">
+	import Signature from '$ui/signature.svelte'
+</script>
+
 <header class="grid-system min-h-lvh p-lh">
-	<h1 class="col-span-2 mt-auto flex flex-col uppercase max-md:row-[2/3]">
-		Shohei
-		<span class="h1">Ohtani</span>
-	</h1>
+	<hgroup class="relative col-span-2 mt-auto max-w-max max-md:row-[2/3]">
+		<h1 class="flex flex-col uppercase">
+			Shohei
+			<span class="h1">Ohtani</span>
+		</h1>
+
+		<Signature class="absolute -right-lh bottom-0 h-[3lh] translate-1/2 invert" />
+	</hgroup>
 
 	<div class="mt-auto md:col-span-2">
 		<p>The player who redefined impossible.</p>

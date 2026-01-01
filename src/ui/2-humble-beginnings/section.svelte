@@ -4,7 +4,7 @@
 
 <section
 	id="humble-beginnings"
-	class="grid-system p-lh [&_p]:max-md:col-span-2"
+	class="grid-system bg-[#ddddd1] p-lh text-background [&_p]:max-md:col-span-2"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<h2 class="top-rlh col-span-full h2 md:sticky md:-mb-lh">Humble Beginnings.</h2>

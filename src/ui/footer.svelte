@@ -1,10 +1,19 @@
 <script lang="ts">
 	import Share from '$ui/share.svelte'
 	import ShowGrid from '$ui/show-grid.svelte'
+	import Signature from '$ui/signature.svelte'
 </script>
 
-<footer id="footer" class="grid-system min-h-lvh p-lh *:max-md:col-span-full">
-	<h2 class="h2">The Ohtani.</h2>
+<footer
+	id="footer"
+	class="grid-system min-h-lvh bg-foreground p-lh text-background *:max-md:col-span-full"
+>
+	<div>
+		<hgroup class="relative max-w-max">
+			<h2 class="h2">The Ohtani.</h2>
+			<Signature class="absolute -right-[.8lh] -bottom-[.5ch] h-[2lh] translate-1/2" />
+		</hgroup>
+	</div>
 
 	<menu>
 		<li><Share /></li>
