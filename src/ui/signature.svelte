@@ -8,6 +8,7 @@
 	class="w-auto text-transparent {className}"
 	src="$assets/signature.png"
 	alt="Shohei Ohtani's signature"
+	width="300"
 	loading="eager"
 	fetchpriority="high"
 	draggable="false"

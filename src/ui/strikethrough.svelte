@@ -1,24 +1,77 @@
 <script lang="ts">
 	import { intersectionObserver } from '$lib/intersection-observer'
+	import { gsap } from 'gsap'
 
 	let { children } = $props()
+
+	let offsetHeight = $state(0)
+	let svg: SVGSVGElement | null = $state(null)
+	let timeline: gsap.core.Timeline | null = $state(null)
+
+	function animatePaths() {
+		const currentTimeline = timeline
+		if (currentTimeline) currentTimeline.kill()
+
+		const paths = svg?.querySelectorAll('path') ?? []
+		const newTimeline = gsap.timeline()
+		timeline = newTimeline
+
+		paths.forEach((path) => {
+			newTimeline.fromTo(
+				path,
+				{ drawSVG: '0%' },
+				{
+					drawSVG: '100%',
+					duration: 0.02,
+					ease: 'power2.out',
+				},
+			)
+		})
+	}
+
+	function resetPaths() {
+		const currentTimeline = timeline
+		if (currentTimeline) {
+			currentTimeline.kill()
+			timeline = null
+		}
+
+		const paths = svg?.querySelectorAll('path') ?? []
+		gsap.set(paths, { drawSVG: '0%' })
+	}
+
+	$effect(() => {
+		if (svg) {
+			const paths = svg.querySelectorAll('path')
+			gsap.set(paths, { drawSVG: '0%' })
+		}
+	})
 </script>
 
 <s
 	class="relative"
-	{@attach intersectionObserver((entry) => {
-		if (entry.isIntersecting) {
-		} else {
-		}
-	})}
+	bind:offsetHeight
+	{@attach intersectionObserver(
+		(entry) => {
+			if (entry.isIntersecting) {
+				animatePaths()
+			} else {
+				resetPaths()
+			}
+		},
+		{
+			rootMargin: `0px 0px -${offsetHeight}px 0px`,
+		},
+	)}
 >
 	{@render children()}
 
 	<svg
-		class="absolute top-1/2 left-1/2 h-full -translate-1/2"
-		height="200"
+		bind:this={svg}
+		class="absolute inset-0 h-full"
+		width="150"
+		height="27"
 		viewBox="123.75 67.16549683 175.5 31.5521698"
-		width="1112.443303"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		<!-- prettier-ignore -->
@@ -32,6 +85,8 @@
 	}
 
 	svg {
-		width: calc(100% + 1ch);
+		width: calc(100% + 0.5ch);
+		translate: -0.5ch 0;
+		filter: drop-shadow(0 0 2px color-mix(in srgb, var(--color-background) 50%, transparent));
 	}
 </style>

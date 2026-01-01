@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
-	import Strike from '$ui/strike.svelte'
+	import S from '$ui/strikethrough.svelte'
 
 	const years = new Date().getFullYear() - 1876
 </script>
@@ -14,7 +14,7 @@
 		<h2 class="top-rlh h2 *:inline-block md:sticky">
 			<span>One of One.</span>
 			<span>Two-Way Player.</span>
-			<span><Strike>Three</Strike> Four-Time MVP.</span>
+			<span><S>Three</S> Four-Time MVP.</span>
 		</h2>
 	</header>
 
