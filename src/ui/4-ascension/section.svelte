@@ -44,15 +44,66 @@
 		<h2 class="bottom-rlh h2 md:sticky">Ascension.</h2>
 	</header>
 
-	<dl class="col-span-full grid grid-cols-[auto_1fr] gap-lh md:col-span-2">
-		{#each items as item}
-			<div class="col-span-full grid grid-cols-subgrid">
-				<dt class="text-right">
-					<time class="tabular-nums" datetime={item.date}>{item.date}</time>
-				</dt>
+	<dl
+		class="relative col-span-full grid grid-cols-[auto_1fr] gap-lh md:col-span-2"
+		style:--item-count={items.length}
+	>
+		{#each items as item, i}
+			<dt class="col-[1/2] text-right" style:grid-row="{i + 1} / {i + 2}">
+				<time
+					class="relative border-y-[.5lh] border-background bg-background tabular-nums"
+					datetime={item.date}>{item.date}</time
+				>
+			</dt>
 
-				<dd>{item.description}</dd>
-			</div>
+			<dd class="col-[2/-1]">{item.description}</dd>
 		{/each}
 	</dl>
 </section>
+
+<style>
+	@property --timeline-progress {
+		syntax: '<percentage>';
+		initial-value: 100%;
+		inherits: false;
+	}
+
+	dl::before {
+		content: '';
+		grid-column: 1 / 2;
+		grid-row: 1 / var(--item-count);
+		border-right: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+		margin-right: calc(2ch - 3px);
+		translate: 0 1lh;
+		clip-path: inset(0 0 var(--timeline-progress) 0);
+		animation: line linear;
+		animation-timeline: view();
+	}
+
+	@keyframes line {
+		20% {
+			--timeline-progress: 100%;
+		}
+
+		60%,
+		100% {
+			--timeline-progress: 0%;
+		}
+	}
+
+	dd {
+		animation: fade ease-out;
+		animation-timeline: view();
+	}
+
+	@keyframes fade {
+		0%,
+		20% {
+			opacity: 0;
+		}
+
+		50% {
+			opacity: 1;
+		}
+	}
+</style>

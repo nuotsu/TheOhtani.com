@@ -6,11 +6,13 @@
 	<ol>
 		{#each links as { href, label }, i}
 			<li style:--delay="{i * 20}ms">
-				<a class="flex not-hover:transition-opacity hover:opacity-100!" {href}>
+				<a class="flex not-hover:transition-opacity hover:opacity-100!" aria-label={label} {href}>
 					<span
 						class="order-last transition-[opacity,translate] delay-(--delay) before:bg-current/50"
 					>
-						{label}
+						<span>
+							<kbd>{label.slice(0, 1)}</kbd>{label.slice(1)}
+						</span>
 					</span>
 				</a>
 			</li>
@@ -33,7 +35,7 @@
 					animation: clip ease-in-out calc(var(--default-transition-duration) + var(--delay))
 						forwards;
 
-					span {
+					a > span {
 						opacity: 0;
 						translate: -1ch 0;
 					}
@@ -66,7 +68,7 @@
 		width: 1lh;
 	}
 
-	span {
+	a > span {
 		display: flex;
 		align-items: center;
 		gap: 0.5ch;

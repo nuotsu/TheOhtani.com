@@ -68,16 +68,15 @@
 	class="grid-system p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<header class="max-md:col-span-full">
-		<h2 class="top-rlh h2 md:sticky">Numbers.</h2>
-	</header>
-
-	<div class="max-md:col-[2/-1]">
-		<p class="sticky top-rlh">
+	<header
+		class="top-rlh col-span-full mb-auto grid gap-lh md:sticky md:col-span-2 md:grid-cols-subgrid"
+	>
+		<h2 class="h2">Numbers.</h2>
+		<p>
 			The digits that define dominance. The statistics that shattered expectations. The records that
 			will echo through eternity.
 		</p>
-	</div>
+	</header>
 
 	<dl class="col-span-full grid grid-cols-subgrid gap-lh md:col-span-2">
 		{#each feats as { title, description, date }}
@@ -99,3 +98,28 @@
 		{/each}
 	</dl>
 </section>
+
+<style>
+	dt {
+		animation: slide ease-out;
+		animation-timeline: view();
+	}
+
+	dd {
+		--x: 1lh;
+		animation: slide ease-out;
+		animation-timeline: view();
+	}
+
+	@keyframes slide {
+		0% {
+			translate: var(--x, -1lh) 0;
+			opacity: 0;
+		}
+
+		50% {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
+</style>

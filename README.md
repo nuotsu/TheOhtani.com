@@ -41,7 +41,8 @@
 ## Personal Goal
 
 - submit to Svelte.dev
+- GSAP SOTD
+- Awwwards SOTD
+- CSS Design Awards
 - earn recognition
-  - Awwwards Site of the Day
-  - CSS Design Awards
 - get noticed by _senpai_
