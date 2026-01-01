@@ -29,7 +29,7 @@
 		min-height: 100lvh;
 
 		&:first-child {
-			margin-block-start: 50lvh;
+			margin-block-start: 50svh;
 		}
 	}
 </style>

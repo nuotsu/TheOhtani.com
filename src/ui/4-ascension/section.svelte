@@ -44,7 +44,7 @@
 		<h2 class="sticky top-rlh h2">Ascension.</h2>
 	</header>
 
-	<dl class="col-span-full grid grid-cols-[auto_1fr] gap-ch md:col-span-2">
+	<dl class="col-span-full grid grid-cols-[auto_1fr] gap-lh md:col-span-2">
 		{#each items as item}
 			<div class="col-span-full grid grid-cols-subgrid">
 				<dt class="text-right">
