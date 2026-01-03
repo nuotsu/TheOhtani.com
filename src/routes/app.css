@@ -25,6 +25,11 @@
 		@apply no-scrollbar;
 	}
 
+	:focus {
+		outline: 0.5px dashed currentColor;
+		@apply transition-colors;
+	}
+
 	label,
 	button,
 	select {

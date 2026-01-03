@@ -18,36 +18,49 @@ export const GET: RequestHandler = async () => {
 	const response = await fetch(url.toString(), {})
 
 	const data = await response.json()
-	const [
-		{ splits: seasonPitchingSplits },
-		{ splits: seasonHittingSplits },
-		{
-			splits: [careerPitchingSplits],
-		},
-		{
-			splits: [careerHittingSplits],
-		},
-	] = data.stats
+
+	const [seasonHittingSplits, seasonPitchingSplits, careerHittingSplits, careerPitchingSplits] = [
+		data.stats.find(
+			({ type, group }: { type: DisplayName; group: DisplayName }) =>
+				type.displayName === 'season' && group.displayName === 'hitting',
+		),
+		data.stats.find(
+			({ type, group }: { type: DisplayName; group: DisplayName }) =>
+				type.displayName === 'season' && group.displayName === 'pitching',
+		),
+		data.stats.find(
+			({ type, group }: { type: DisplayName; group: DisplayName }) =>
+				type.displayName === 'career' && group.displayName === 'hitting',
+		),
+		data.stats.find(
+			({ type, group }: { type: DisplayName; group: DisplayName }) =>
+				type.displayName === 'career' && group.displayName === 'pitching',
+		),
+	].map(({ splits }) => splits)
 
 	let stats = {} as App.StatsResponse
 
 	seasons.forEach((year) => {
 		stats[year] = {
-			pitching:
-				seasonPitchingSplits.find(({ season }: SeasonStat) => season === year.toString())?.stat ||
-				{},
 			hitting:
 				seasonHittingSplits.find(({ season }: SeasonStat) => season === year.toString())?.stat ||
+				{},
+			pitching:
+				seasonPitchingSplits.find(({ season }: SeasonStat) => season === year.toString())?.stat ||
 				{},
 		}
 	})
 
 	stats.career = {
-		hitting: careerHittingSplits.stat,
-		pitching: careerPitchingSplits.stat,
+		hitting: careerHittingSplits[0].stat,
+		pitching: careerPitchingSplits[0].stat,
 	}
 
 	return json(stats)
+}
+
+type DisplayName = {
+	displayName: string
 }
 
 type SeasonStat = {

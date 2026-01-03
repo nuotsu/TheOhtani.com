@@ -70,7 +70,7 @@
 					<div class="mt-[.25ch] gap-x-ch text-sm">
 						{#each dates as date, i}
 							<button
-								class="not-hover:text-neutral-400 not-hover:transition-colors"
+								class="not-hover:text-neutral-400 not-hover:transition-[color]"
 								onclick={() => {
 									const statsSelect = document.querySelector(`#stats select`) as HTMLSelectElement
 									const [year] = date.match(/\d{4}/) ?? [new Date().getFullYear().toString()]

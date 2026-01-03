@@ -53,6 +53,7 @@
 
 		:global(section) {
 			min-height: 100lvh;
+			isolation: isolate;
 		}
 	}
 </style>
