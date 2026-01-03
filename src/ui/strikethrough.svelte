@@ -32,7 +32,6 @@
 		:global(svg) {
 			width: calc(100% + 0.5ch);
 			translate: -0.5ch 0;
-			/* filter: drop-shadow(0 0 2px color-mix(in srgb, var(--color-background) 50%, transparent)); */
 		}
 	}
 </style>

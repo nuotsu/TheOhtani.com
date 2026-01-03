@@ -20,7 +20,10 @@
 	<hgroup>
 		<div class="relative max-w-max">
 			<h2 class="h2"><Count>The Ohtani.</Count></h2>
-			<Signature class="absolute -right-[.8lh] -bottom-[.5ch] h-[2lh] translate-1/2" />
+			<Signature
+				class="absolute -right-[.8lh] -bottom-[.5ch] h-[2lh] translate-1/2"
+				delay={6 * 0.1}
+			/>
 		</div>
 	</hgroup>
 

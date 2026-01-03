@@ -55,8 +55,10 @@
 			<dt class="col-[1/2] text-right" style:grid-row="{i + 1} / {i + 2}">
 				<time
 					class="relative block bg-background tabular-nums outline-[.5lh] outline-background"
-					datetime={item.date}>{item.date}</time
+					datetime={item.date}
 				>
+					<span>{item.date}</span>
+				</time>
 			</dt>
 
 			<dd class="col-[2/-1]">{item.description}</dd>
@@ -112,6 +114,7 @@
 		}
 	}
 
+	dt time span,
 	dd {
 		animation: fade ease-out;
 		animation-timeline: view();

@@ -3,13 +3,13 @@
 	import { gsap } from 'gsap'
 	import { SplitText } from 'gsap/SplitText'
 
-	let { children, class: className = '', stagger = 0.05 } = $props()
+	let { children, class: className = '', type = 'chars', stagger = 0.05 } = $props()
 
 	let elem: HTMLSpanElement | null = $state(null)
 	let isIntersecting = $state(false)
 
 	$effect(() => {
-		const split = new SplitText(elem, { type: 'chars' })
+		const split = new SplitText(elem, { type })
 		const chars = split.chars
 
 		gsap.set(chars, {

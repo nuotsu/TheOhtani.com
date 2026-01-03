@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+	import Count from '$ui/count.svelte'
 	import P from '$ui/paragraph-reveal.svelte'
 	import S from '$ui/strikethrough.svelte'
 	import Images from './images.svelte'
@@ -11,9 +12,11 @@
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<h2 class=" col-span-full text-center h1">
-		One of One.<br />
-		Two-Way Player.<br />
-		<S>Three</S> Four-Time MVP.
+		<Count>One of One.</Count><br />
+		<Count>Two-Way Player.</Count><br />
+		<Count type="words,chars">
+			<S>Three</S> Four-Time MVP.
+		</Count>
 	</h2>
 
 	<P

@@ -5,12 +5,14 @@
 	import type { SVGAttributes } from 'svelte/elements'
 
 	let {
-		options,
 		children,
+		options,
+		delay,
 		...props
 	}: {
 		children: Snippet
 		options?: IntersectionObserverInit
+		delay?: gsap.TweenValue
 	} & SVGAttributes<SVGSVGElement> = $props()
 
 	let elem: SVGSVGElement | null = $state(null)
@@ -21,7 +23,9 @@
 		if (currentTimeline) currentTimeline.kill()
 
 		const paths = elem?.querySelectorAll('path') ?? []
-		const newTimeline = gsap.timeline()
+		const newTimeline = gsap.timeline({
+			delay: typeof delay === 'number' ? delay : undefined,
+		})
 		timeline = newTimeline
 
 		paths.forEach((path) => {
@@ -58,6 +62,7 @@
 
 <svg
 	{...props}
+	style:--delay={typeof delay === 'number' ? `${delay}s` : delay?.toString()}
 	bind:this={elem}
 	{@attach intersectionObserver((entry) => {
 		if (entry.isIntersecting) {
