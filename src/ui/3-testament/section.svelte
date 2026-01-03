@@ -4,7 +4,7 @@
 
 <section
 	id="testament"
-	class="grid-system p-lh"
+	class="grid-system"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<h2 class="top-rlh col-span-full mb-auto h2 md:sticky md:text-right">Testament.</h2>

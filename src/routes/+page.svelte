@@ -52,6 +52,7 @@
 		padding-block-start: 50svh;
 
 		:global(section) {
+			padding: 2lh 1lh;
 			min-height: 100lvh;
 			isolation: isolate;
 		}

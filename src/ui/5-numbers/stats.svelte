@@ -5,7 +5,10 @@
 	const statsResponse = $derived(page.data.stats) satisfies App.StatsResponse
 	const years = $derived(Object.keys(statsResponse).reverse().slice(1))
 
-	let selectedSeason = $state(new Date().getFullYear().toString())
+	const today = new Date()
+	const offset = Number(today.getMonth() <= 3) // after April
+
+	let selectedSeason = $state((today.getFullYear() - offset).toString())
 </script>
 
 <article

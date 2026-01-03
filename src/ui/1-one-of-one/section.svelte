@@ -7,7 +7,7 @@
 
 <section
 	id="one-of-one"
-	class="relative grid-system overflow-x-clip p-lh pb-0"
+	class="relative grid-system overflow-x-clip py-lh pb-0"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<h2 class=" col-span-full text-center h1">

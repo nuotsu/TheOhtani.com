@@ -37,7 +37,7 @@
 
 <section
 	id="ascension"
-	class="mb-[4lh] grid-system p-lh"
+	class="mb-[4lh] grid-system"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<header class="grid items-end max-md:col-span-full">

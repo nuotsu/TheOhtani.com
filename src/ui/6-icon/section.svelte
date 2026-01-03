@@ -9,7 +9,7 @@
 
 <section
 	id="icon"
-	class="mb-[50svh] grid-system p-lh"
+	class="grid-system"
 	{@attach intersectionObserver(activateTableOfContents[0], {
 		rootMargin: `${innerHeight / 2}px 0px 0px 0px`,
 	})}

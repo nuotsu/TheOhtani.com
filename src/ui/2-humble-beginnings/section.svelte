@@ -4,7 +4,7 @@
 
 <section
 	id="humble-beginnings"
-	class="grid-system bg-[#ddddd1] p-lh text-background"
+	class="grid-system bg-[#ddddd1] text-background"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<header class="col-span-full grid md:row-[1/4] md:items-end">
