@@ -2,14 +2,15 @@
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
 	import P from '$ui/paragraph-reveal.svelte'
 	import S from '$ui/strikethrough.svelte'
+	import Images from './images.svelte'
 </script>
 
 <section
 	id="one-of-one"
-	class="grid-system p-lh"
+	class="relative grid-system overflow-x-clip p-lh"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<h2 class="col-span-full text-center h1">
+	<h2 class=" col-span-full text-center h1">
 		One of One.<br />
 		Two-Way Player.<br />
 		<S>Three</S> Four-Time MVP.
@@ -26,4 +27,6 @@
 		like him. A player who dominates as both pitcher and hitter. Who makes the impossible routine. Who
 		exists in a category entirely his own.
 	</P>
+
+	<Images />
 </section>

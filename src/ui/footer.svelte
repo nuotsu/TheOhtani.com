@@ -7,6 +7,7 @@
 		{ label: 'S-2K', href: 'https://s-2k.webflow.io' },
 		{ label: "Shopify Editions Winter '26", href: 'https://www.shopify.com/editions/winter2026' },
 		{ label: 'New Balance', href: 'https://newbalance-ohtani.com' },
+		{ label: 'Lando Norris', href: 'https://landonorris.com' },
 	]
 </script>
 
