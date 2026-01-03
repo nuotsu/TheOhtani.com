@@ -7,6 +7,17 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
+
+		interface ViewsResponse {
+			views: number
+		}
+
+		interface StatsResponse {
+			[number]: {
+				hitting: Record<string, number | string>
+				pitching: Record<string, number | string>
+			}
+		}
 	}
 }
 

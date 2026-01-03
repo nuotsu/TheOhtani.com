@@ -1,28 +1,48 @@
 <script lang="ts">
-	const seasons = [2021, 2022, 2023, 2024, 2025, 2026]
+	import { page } from '$app/state'
 
-	const stats = ['Home runs']
+	const statsResponse = $derived(page.data.stats) satisfies App.StatsResponse
+	const years = $derived(Object.keys(statsResponse).reverse())
+
+	let selectedSeason = $state(new Date().getFullYear().toString())
 </script>
 
-<article class="col-span-full grid grid-cols-subgrid md:col-[2/3] md:row-[3/4]">
-	<select class="col-span-full">
+<article
+	id="stats"
+	class="bottom-rlh col-span-full grid grid-cols-subgrid gap-y-[.5ch] bg-background md:sticky md:col-[2/3] md:row-[3/4]"
+>
+	<select class="col-span-full px-ch text-center md:ml-auto" bind:value={selectedSeason}>
 		<optgroup label="Season">
-			{#each seasons as season}
-				<option value={season} selected={season === new Date().getFullYear()}>
-					{season} Season
-				</option>
+			{#each years as year}
+				<option value={year}>{year} Season</option>
 			{/each}
 		</optgroup>
 
-		<optgroup label="Career">
-			<option value="career">Career</option>
-		</optgroup>
+		<option value="career">Career</option>
 	</select>
 
-	<dl class="col-span-full grid grid-cols-subgrid gap-lh md:grid-cols-[auto_1fr]">
-		{#each stats as stat}
-			<dt class="text-right max-md:col-span-2">{stat}</dt>
-			<dd class="tabular-nums max-md:col-span-2">0</dd>
-		{/each}
+	<dl class="col-span-full grid grid-cols-2 gap-x-rlh text-5xl md:grid-cols-[1fr_auto]">
+		{@render stat('AVG', 'hitting', 'avg', 'Batting average')}
+		{@render stat('HR', 'hitting', 'homeRuns', 'Home runs')}
+		{@render stat('RBI', 'hitting', 'rbi', 'Runs batted in')}
+		{@render stat('SB', 'hitting', 'stolenBases', 'Stolen bases')}
+		{@render stat('K', 'pitching', 'strikeOuts', 'Strikeouts')}
 	</dl>
 </article>
+
+{#snippet stat(short: string, group: 'hitting' | 'pitching', key: string, long: string)}
+	{#key selectedSeason}
+		{@const stats = statsResponse[selectedSeason][group]}
+		{#if stats}
+			<dt
+				class="text-right font-bold tabular-nums empty:text-current/50 empty:before:content-['-']"
+			>
+				{stats[key]}
+			</dt>
+
+			<dd>
+				<abbr class="text-base no-underline" title={long}>{short}</abbr>
+			</dd>
+		{/if}
+	{/key}
+{/snippet}

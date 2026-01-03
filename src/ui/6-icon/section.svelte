@@ -13,6 +13,14 @@
 	{@attach intersectionObserver(activateTableOfContents[0], {
 		rootMargin: `${innerHeight / 2}px 0px 0px 0px`,
 	})}
+	{@attach intersectionObserver((entry) => {
+		const header = document.querySelector('#numbers #stats') as HTMLElement
+		if (entry.isIntersecting) {
+			header?.style.setProperty('z-index', '3')
+		} else {
+			header?.style.removeProperty('z-index')
+		}
+	})}
 >
 	<h2 class="top-rlh col-span-full h2 md:sticky">Icon.</h2>
 

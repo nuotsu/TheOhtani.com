@@ -19,7 +19,7 @@
 		},
 		{ date: '2023', description: 'Second unanimous AL MVP. American League home run champion.' },
 		{
-			date: 'December 2023',
+			date: 'Dec 2023',
 			description: '$700 million. Los Angeles Dodgers. The stage finally worthy of the player.',
 		},
 		{
