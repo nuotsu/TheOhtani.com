@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+	import Count from '$ui/count.svelte'
 </script>
 
 <section
@@ -7,7 +8,9 @@
 	class="grid-system"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<h2 class="top-rlh col-span-full mb-auto h2 md:sticky md:text-right">Testament.</h2>
+	<h2 class="top-rlh col-span-full mb-auto h2 md:sticky md:text-right">
+		<Count>Testament.</Count>
+	</h2>
 
 	<div class="col-span-full grid grid-cols-subgrid gap-lh max-md:*:col-span-2 md:col-[2/4]">
 		<p>
@@ -37,12 +40,12 @@
 		}
 
 		h2 {
-			animation: fade ease-in-out;
+			animation: fade-out ease-in-out;
 			animation-timeline: view();
 		}
 	}
 
-	@keyframes fade {
+	@keyframes fade-out {
 		50% {
 			opacity: 1;
 		}

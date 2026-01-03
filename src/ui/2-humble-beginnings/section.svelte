@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+	import Count from '$ui/count.svelte'
 </script>
 
 <section
@@ -8,7 +9,9 @@
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<header class="col-span-full grid md:row-[1/4] md:items-end">
-		<h2 class="bottom-rlh h2 md:sticky">Humble Beginnings.</h2>
+		<h2 class="bottom-rlh h2 md:sticky">
+			<Count stagger={0.03}>Humble Beginnings.</Count>
+		</h2>
 	</header>
 
 	<div class="col-span-full row-[2/3] grid grid-cols-subgrid gap-lh">

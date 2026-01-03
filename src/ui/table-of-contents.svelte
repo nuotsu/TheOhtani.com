@@ -27,12 +27,12 @@
 		--subdued: 0.25;
 
 		&:has(a:hover) a:not(:hover),
-		&:global(:has(.in-view) li:not(.in-view) a) {
+		&:global(:has(.in-intersecting) li:not(.in-intersecting) a) {
 			opacity: var(--subdued);
 		}
 
 		@media (width < 48rem) {
-			&:global(:has(.in-view)) {
+			&:global(:has(.in-intersecting)) {
 				li:not(:hover) {
 					animation: clip ease-in-out calc(var(--default-transition-duration) + var(--delay))
 						forwards;
@@ -59,7 +59,7 @@
 	li {
 		counter-increment: i;
 
-		&:global(.in-view:has(~ .in-view)) a {
+		&:global(.in-intersecting:has(~ .in-intersecting)) a {
 			opacity: var(--subdued);
 		}
 	}

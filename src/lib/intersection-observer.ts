@@ -27,9 +27,9 @@ export const activateTableOfContents = [
 		const tocItem = document.querySelector(`nav a[href="#${id}"]`)?.closest('li')
 
 		if (entry.isIntersecting) {
-			tocItem?.classList.add('in-view')
+			tocItem?.classList.add('in-intersecting')
 		} else {
-			tocItem?.classList.remove('in-view')
+			tocItem?.classList.remove('in-intersecting')
 		}
 	},
 	{ rootMargin: '0px 0px -192px 0px' },

@@ -22,7 +22,7 @@
 			translate 0.5s ease-in-out,
 			opacity 0.5s ease-in-out;
 
-		&:not(:global(.in-view)) {
+		&:not(:global(.in-intersecting)) {
 			translate: 100% 0;
 			opacity: 0;
 		}

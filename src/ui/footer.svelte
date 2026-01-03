@@ -3,6 +3,7 @@
 	import { ShowGrid, ShowGridToggle } from '$ui/show-grid'
 	import Signature from '$ui/signature.svelte'
 	import ViewCount from '$ui/view-count.svelte'
+	import Count from './count.svelte'
 
 	const inspiration = [
 		{ label: 'S-2K', href: 'https://s-2k.webflow.io' },
@@ -18,7 +19,7 @@
 >
 	<hgroup>
 		<div class="relative max-w-max">
-			<h2 class="h2">The Ohtani.</h2>
+			<h2 class="h2"><Count>The Ohtani.</Count></h2>
 			<Signature class="absolute -right-[.8lh] -bottom-[.5ch] h-[2lh] translate-1/2" />
 		</div>
 	</hgroup>
@@ -70,7 +71,7 @@
 
 	@keyframes slide {
 		0% {
-			translate: 0 var(--y, calc(sibling-index() * 4lh));
+			translate: 0 var(--y, calc(sibling-index() * 8lh));
 		}
 		50% {
 			translate: none;

@@ -16,7 +16,7 @@
 	class="bottom-rlh col-span-full grid grid-cols-subgrid gap-y-[.5ch] md:sticky md:col-[1/3] md:row-[3/4]"
 >
 	<select
-		class="col-span-full px-ch text-center hover:bg-current/10 md:ml-auto"
+		class="col-span-full px-ch text-center tabular-nums hover:bg-current/10 md:ml-auto"
 		bind:value={selectedSeason}
 	>
 		<optgroup label="Season">
@@ -46,6 +46,7 @@
 			<dt class="text-right font-bold tabular-nums">
 				<Count
 					class="inline-block aria-[label='']:text-current/50 aria-[label='']:before:content-['-']"
+					stagger={0.1}
 				>
 					{key
 						.map((k) => stats[k])

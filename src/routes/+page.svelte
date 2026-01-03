@@ -27,9 +27,9 @@
 			const progress = document.querySelector('#progress')
 
 			if (entry.isIntersecting) {
-				progress?.classList.add('in-view')
+				progress?.classList.add('in-intersecting')
 			} else {
-				progress?.classList.remove('in-view')
+				progress?.classList.remove('in-intersecting')
 			}
 		},
 		{ rootMargin: `${innerHeight / 2}px 0px -${innerHeight * 0.25}px 0px` },

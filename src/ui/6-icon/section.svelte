@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+	import Count from '$ui/count.svelte'
 	import P from '$ui/paragraph-reveal.svelte'
 
 	let innerHeight = $state(0)
@@ -14,7 +15,9 @@
 		rootMargin: `${innerHeight / 2}px 0px 0px 0px`,
 	})}
 >
-	<h2 class="top-rlh col-span-full h2 md:sticky">Icon.</h2>
+	<h2 class="top-rlh col-span-full h2 md:sticky">
+		<Count>Icon.</Count>
+	</h2>
 
 	<p class="max-md:col-span-2">
 		Beyond the statistics and the highlights, Shohei Ohtani has become an icon—a symbol of what's

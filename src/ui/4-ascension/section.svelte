@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
+	import Count from '$ui/count.svelte'
 
 	const items = [
 		{
@@ -41,7 +42,9 @@
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<header class="grid items-end max-md:col-span-full">
-		<h2 class="bottom-rlh h2 md:sticky">Ascension.</h2>
+		<h2 class="bottom-rlh h2 md:sticky">
+			<Count>Ascension.</Count>
+		</h2>
 	</header>
 
 	<dl
@@ -62,6 +65,23 @@
 </section>
 
 <style>
+	@media (width >= 48rem) {
+		h2 {
+			animation: fade-in ease-in-out;
+			animation-timeline: view();
+		}
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+
+		50% {
+			opacity: 1;
+		}
+	}
+
 	@property --timeline-progress {
 		syntax: '<percentage>';
 		initial-value: 0%;
