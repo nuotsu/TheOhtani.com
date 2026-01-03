@@ -2,6 +2,7 @@
 	import Share from '$ui/share.svelte'
 	import ShowGrid from '$ui/show-grid.svelte'
 	import Signature from '$ui/signature.svelte'
+	import ViewCount from '$ui/view-count.svelte'
 
 	const inspiration = [
 		{ label: 'S-2K', href: 'https://s-2k.webflow.io' },
@@ -27,6 +28,7 @@
 		<!-- <li><button>View on Awwwards</button></li> -->
 		<li><a class="link" href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
 		<li><ShowGrid /></li>
+		<li><ViewCount /></li>
 	</menu>
 
 	<div>

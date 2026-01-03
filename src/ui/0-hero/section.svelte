@@ -12,7 +12,7 @@
 		<Signature class="absolute -right-lh bottom-0 h-[2lh] translate-1/2" />
 	</hgroup>
 
-	<div class="mt-auto md:col-span-2">
+	<div class="mt-auto max-md:space-y-ch md:col-span-2 md:text-lg">
 		<p>The player who redefined impossible.</p>
 		<p>A digital monument to the greatest player of all time.</p>
 	</div>
