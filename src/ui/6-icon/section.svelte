@@ -34,6 +34,6 @@
 	</p>
 
 	<div class="col-span-full grid min-h-[50svh] place-items-center">
-		<P class=" text-center text-lg">And the story continues...</P>
+		<P class="text-center h2">And the story continues...</P>
 	</div>
 </section>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state'
+	import Count from '$ui/count.svelte'
 
 	const statsResponse = $derived(page.data.stats) satisfies App.StatsResponse
 	const years = $derived(Object.keys(statsResponse).reverse().slice(1))
@@ -11,14 +12,17 @@
 	id="stats"
 	class="bottom-rlh col-span-full grid grid-cols-subgrid gap-y-[.5ch] md:sticky md:col-[1/3] md:row-[3/4]"
 >
-	<select class="col-span-full px-ch text-center md:ml-auto" bind:value={selectedSeason}>
+	<select
+		class="col-span-full px-ch text-center hover:bg-current/10 md:ml-auto"
+		bind:value={selectedSeason}
+	>
 		<optgroup label="Season">
 			{#each years as year}
-				<option value={year}>{year} Season</option>
+				<option value={year}>{year} Season stats</option>
 			{/each}
 		</optgroup>
 
-		<option value="career">Career</option>
+		<option value="career">Career stats</option>
 	</select>
 
 	<dl class="col-span-full grid grid-cols-2 gap-x-rlh text-5xl md:grid-cols-[1fr_auto]">
@@ -36,16 +40,18 @@
 	{#key selectedSeason}
 		{@const stats = statsResponse[selectedSeason][group]}
 		{#if stats}
-			<dt
-				class="text-right font-bold tabular-nums empty:text-current/50 empty:before:content-['-']"
-			>
-				{key
-					.map((k) => stats[k])
-					.filter(Boolean)
-					.join('-')}
+			<dt class="text-right font-bold tabular-nums">
+				<Count
+					class="inline-block aria-[label='']:text-current/50 aria-[label='']:before:content-['-']"
+				>
+					{key
+						.map((k) => stats[k])
+						.filter(Boolean)
+						.join('-')}
+				</Count>
 			</dt>
 
-			<dd class="whitespace-nowrap [dt:empty+&]:text-current/50">
+			<dd class="whitespace-nowrap [dt:has([aria-label=''])+&]:text-current/50">
 				<abbr class="text-base no-underline" title={long}>{short}</abbr>
 			</dd>
 		{/if}
@@ -53,12 +59,10 @@
 {/snippet}
 
 <style>
-	article {
-		animation: appear ease-out;
-		animation-timeline: view();
-
-		@media (width >= 48rem) {
-			--x: -1lh;
+	@media (width >= 48rem) {
+		article {
+			animation: appear ease-out;
+			animation-timeline: view();
 		}
 	}
 
@@ -67,7 +71,7 @@
 		18% {
 			opacity: 0;
 			filter: blur(0.25ch);
-			translate: var(--x, 0) 0;
+			translate: -1lh 0;
 		}
 
 		25% {

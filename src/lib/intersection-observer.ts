@@ -32,5 +32,5 @@ export const activateTableOfContents = [
 			tocItem?.classList.remove('in-view')
 		}
 	},
-	{ rootMargin: '0px 0px -72px 0px' },
+	{ rootMargin: '0px 0px -192px 0px' },
 ] as const
