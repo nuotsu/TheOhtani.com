@@ -17,6 +17,10 @@ declare global {
 				hitting: Record<string, number | string>
 				pitching: Record<string, number | string>
 			}
+			career: {
+				hitting: Record<string, number | string>
+				pitching: Record<string, number | string>
+			}
 		}
 	}
 }

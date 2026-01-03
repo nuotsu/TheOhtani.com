@@ -2,7 +2,7 @@
 	import { page } from '$app/state'
 
 	const statsResponse = $derived(page.data.stats) satisfies App.StatsResponse
-	const years = $derived(Object.keys(statsResponse).reverse())
+	const [career, ...years] = $derived(Object.keys(statsResponse).reverse())
 
 	let selectedSeason = $state(new Date().getFullYear().toString())
 </script>
@@ -22,22 +22,27 @@
 	</select>
 
 	<dl class="col-span-full grid grid-cols-2 gap-x-rlh text-5xl md:grid-cols-[1fr_auto]">
-		{@render stat('AVG', 'hitting', 'avg', 'Batting average')}
-		{@render stat('HR', 'hitting', 'homeRuns', 'Home runs')}
-		{@render stat('RBI', 'hitting', 'rbi', 'Runs batted in')}
-		{@render stat('SB', 'hitting', 'stolenBases', 'Stolen bases')}
-		{@render stat('K', 'pitching', 'strikeOuts', 'Strikeouts')}
+		{@render stat('AVG', 'hitting', ['avg'], 'Batting average')}
+		{@render stat('HR', 'hitting', ['homeRuns'], 'Home runs')}
+		{@render stat('RBI', 'hitting', ['rbi'], 'Runs batted in')}
+		{@render stat('SB', 'hitting', ['stolenBases'], 'Stolen bases')}
+		{@render stat('W-L', 'pitching', ['wins', 'losses'], 'Win-loss record')}
+		{@render stat('K', 'pitching', ['strikeOuts'], 'Strikeouts')}
+		{@render stat('ERA', 'pitching', ['era'], 'Earned run average')}
 	</dl>
 </article>
 
-{#snippet stat(short: string, group: 'hitting' | 'pitching', key: string, long: string)}
+{#snippet stat(short: string, group: 'hitting' | 'pitching', key: string[], long: string)}
 	{#key selectedSeason}
 		{@const stats = statsResponse[selectedSeason][group]}
 		{#if stats}
 			<dt
 				class="text-right font-bold tabular-nums empty:text-current/50 empty:before:content-['-']"
 			>
-				{stats[key]}
+				{key
+					.map((k) => stats[k])
+					.filter(Boolean)
+					.join('-')}
 			</dt>
 
 			<dd>

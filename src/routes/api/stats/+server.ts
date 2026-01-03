@@ -8,7 +8,7 @@ const seasons = [...Array(currentYear - 2017).keys()].map((i) => currentYear - i
 
 Object.entries({
 	group: 'hitting,pitching',
-	stats: 'season',
+	stats: 'season,career',
 	// statFields: 'standard,advanced',
 	seasons: seasons.join(','),
 	game_type: 'R',
@@ -18,16 +18,34 @@ export const GET: RequestHandler = async () => {
 	const response = await fetch(url.toString(), {})
 
 	const data = await response.json()
-	const [{ splits: pSplits }, { splits: hSplits }] = data.stats
+	const [
+		{ splits: seasonPitchingSplits },
+		{ splits: seasonHittingSplits },
+		{
+			splits: [careerPitchingSplits],
+		},
+		{
+			splits: [careerHittingSplits],
+		},
+	] = data.stats
 
 	let stats = {} as App.StatsResponse
 
 	seasons.forEach((year) => {
 		stats[year] = {
-			pitching: pSplits.find(({ season }: SeasonStat) => season === year.toString())?.stat || {},
-			hitting: hSplits.find(({ season }: SeasonStat) => season === year.toString())?.stat || {},
+			pitching:
+				seasonPitchingSplits.find(({ season }: SeasonStat) => season === year.toString())?.stat ||
+				{},
+			hitting:
+				seasonHittingSplits.find(({ season }: SeasonStat) => season === year.toString())?.stat ||
+				{},
 		}
 	})
+
+	stats.career = {
+		hitting: careerHittingSplits.stat,
+		pitching: careerPitchingSplits.stat,
+	}
 
 	return json(stats)
 }
