@@ -5,9 +5,13 @@
 
 <section
 	id="humble-beginnings"
-	class="grid-system bg-[#ddddd1] text-background"
+	class="relative grid-system overflow-clip bg-[#ddddd1] text-background max-md:pt-[5lh]!"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
+	<div class="absolute inset-x-0 top-0 mask-b-to-60%">
+		<hr class="border-none" />
+	</div>
+
 	<header class="col-span-full grid md:row-[1/4] md:items-end">
 		<h2 class="bottom-rlh h2 md:sticky">
 			<Count stagger={0.03}>Humble Beginnings.</Count>
@@ -33,3 +37,22 @@
 		</p>
 	</div>
 </section>
+
+<style>
+	hr {
+		--height: 10lh;
+		height: var(--height);
+		background: 0% 100% / auto 100% url($assets/field.jpg) repeat-x;
+		transform-origin: top;
+		transform: perspective(var(--height)) rotateX(80deg);
+		opacity: 0.75;
+		animation: perspective linear;
+		animation-timeline: view();
+	}
+
+	@keyframes perspective {
+		to {
+			background-position-x: 10vmin;
+		}
+	}
+</style>

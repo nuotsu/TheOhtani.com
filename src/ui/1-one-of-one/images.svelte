@@ -95,7 +95,7 @@
 		height: 50lvh;
 
 		:global(img) {
-			translate: 0 1ch;
+			translate: 0 0.5ch;
 		}
 	}
 
@@ -104,7 +104,7 @@
 		height: 67lvh;
 
 		:global(img) {
-			translate: 0 2ch;
+			translate: 0 1.5ch;
 		}
 	}
 </style>

@@ -30,13 +30,14 @@
 	<menu>
 		<li><Share /></li>
 		<!-- <li><button>View on Awwwards</button></li> -->
-		<li><a class="link" href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
 		<li><ShowGridToggle /></li>
+		<li><a class="link" href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
 		<li><ViewCount /></li>
 	</menu>
 
 	<div>
-		<h2>Inspiration & Credits:</h2>
+		<h2 class="text-current/50">Inspiration / Credits:</h2>
+
 		<ul>
 			{#each inspiration as { label, href }}
 				<li>
