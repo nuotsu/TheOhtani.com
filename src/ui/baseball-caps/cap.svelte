@@ -56,7 +56,7 @@
 
 <model-viewer
 	bind:this={viewer}
-	src="/src/assets/baseball-cap.glb"
+	src="/baseball-cap.glb"
 	alt="Baseball cap"
 	camera-controls
 	disable-tap
