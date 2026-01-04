@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/state'
 	import Count from '$ui/count.svelte'
+	import Select from './select.svelte'
 
 	const statsResponse = $derived(page.data.stats) satisfies App.StatsResponse
-	const years = $derived(Object.keys(statsResponse).reverse().slice(1))
+	const options = $derived(Object.keys(statsResponse).reverse())
 
 	const today = new Date()
 	const offset = Number(today.getMonth() <= 3) // after April
@@ -15,18 +16,7 @@
 	id="stats"
 	class="bottom-rlh col-span-full grid grid-cols-subgrid gap-y-[.5ch] md:sticky md:col-[1/3] md:row-[3/4]"
 >
-	<select
-		class="col-span-full px-ch text-center tabular-nums hover:bg-current/10 md:ml-auto"
-		bind:value={selectedSeason}
-	>
-		<optgroup label="Season">
-			{#each years as year}
-				<option value={year}>{year} Season stats</option>
-			{/each}
-		</optgroup>
-
-		<option value="career">Career stats</option>
-	</select>
+	<Select bind:value={selectedSeason} {options} />
 
 	<dl class="col-span-full grid grid-cols-2 gap-x-rlh text-5xl md:grid-cols-[1fr_auto]">
 		{@render stat('AVG', 'hitting', ['avg'], 'Batting average')}
@@ -55,7 +45,7 @@
 				</Count>
 			</dt>
 
-			<dd class="whitespace-nowrap [dt:has([aria-label=''])+&]:text-current/50">
+			<dd class="whitespace-nowrap transition-colors [dt:has([aria-label=''])+&]:text-current/50">
 				<abbr class="text-base no-underline" title={long}>{short}</abbr>
 			</dd>
 		{/if}
