@@ -25,4 +25,9 @@ declare global {
 	}
 }
 
+declare module '*.usdz' {
+	const value: string
+	export default value
+}
+
 export {}

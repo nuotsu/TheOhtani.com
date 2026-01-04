@@ -22,7 +22,7 @@
 - words that describe ohtani
   - unicorn 🦄🦄🦄
   - GOAT 🐐🐐🐐
-  - humble
+  - humble  
   - stoic
 - Faces
   - face tracker

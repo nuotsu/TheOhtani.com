@@ -7,6 +7,7 @@
 	import A from '$ui/4-ascension/section.svelte'
 	import N from '$ui/5-numbers/section.svelte'
 	import I from '$ui/6-icon/section.svelte'
+	import BaseballCaps from '$ui/baseball-caps/section.svelte'
 	import Facade from '$ui/facade.svelte'
 	import Footer from '$ui/footer.svelte'
 	import Progress from '$ui/progress.svelte'
@@ -40,6 +41,9 @@
 	<O />
 	<H />
 	<T />
+
+	<BaseballCaps />
+
 	<A />
 	<N />
 	<I />
