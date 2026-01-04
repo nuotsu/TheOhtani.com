@@ -13,7 +13,7 @@
 
 <fieldset class="col-span-full flex justify-center md:ml-auto">
 	<button
-		class="pr-ch transition-colors"
+		class="pr-ch transition-[color,translate] active:translate-x-[-.25ch]"
 		onclick={() => {
 			if (!select) return
 			select.value = years[years.indexOf(select?.value ?? '') + 1] ?? years[0]
@@ -32,7 +32,7 @@
 	</select>
 
 	<button
-		class="pl-ch transition-colors"
+		class="pl-ch transition-[color,translate] active:translate-x-[.25ch]"
 		onclick={() => {
 			if (!select) return
 			select.value = years[years.indexOf(select?.value ?? '') - 1] ?? years[years.length - 1]
@@ -43,7 +43,9 @@
 </fieldset>
 
 <style>
-	button:not(:is(:hover, :focus-visible)) {
-		color: color-mix(in srgb, currentColor 50%, transparent);
+	button {
+		&:not(:is(:hover, :focus-visible)) {
+			color: color-mix(in srgb, currentColor 50%, transparent);
+		}
 	}
 </style>

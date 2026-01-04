@@ -3,7 +3,7 @@
 	import Count from '$ui/count.svelte'
 	import P from '$ui/paragraph-reveal.svelte'
 	import S from '$ui/strikethrough.svelte'
-	import Images from './images.svelte'
+	import TwoWay from './two-way.svelte'
 </script>
 
 <section
@@ -31,5 +31,5 @@
 		exists in a category entirely his own.
 	</P>
 
-	<Images />
+	<TwoWay />
 </section>
