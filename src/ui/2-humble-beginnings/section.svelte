@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
 	import Count from '$ui/count.svelte'
+	import Field from './field.svelte'
 </script>
 
 <section
@@ -8,9 +9,7 @@
 	class="relative grid-system overflow-clip bg-[#ddddd1] text-background max-md:pt-[5lh]!"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
-	<div class="absolute inset-x-0 top-0 mask-b-to-60%">
-		<hr class="border-none" />
-	</div>
+	<Field />
 
 	<header class="col-span-full grid md:row-[1/4] md:items-end">
 		<h2 class="bottom-rlh h2 md:sticky">
@@ -39,20 +38,23 @@
 </section>
 
 <style>
-	hr {
-		--height: 10lh;
-		height: var(--height);
-		background: 0% 100% / auto 100% url($assets/field.jpg) repeat-x;
-		transform-origin: top;
-		transform: perspective(var(--height)) rotateX(80deg);
-		opacity: 0.75;
-		animation: perspective linear;
+	div p {
+		animation: fade ease-in-out forwards;
 		animation-timeline: view();
 	}
 
-	@keyframes perspective {
-		to {
-			background-position-x: 10vmin;
+	@keyframes fade {
+		0% {
+			opacity: 0;
+			filter: blur(1ch);
+		}
+
+		25% {
+			filter: none;
+		}
+
+		50% {
+			opacity: 1;
 		}
 	}
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { rotateOffset = 0 } = $props()
+	let { rotateOffset = 0, children } = $props()
 
 	let scrollY = $state(0)
 	let viewer: HTMLElement | null = $state(null)
@@ -54,21 +54,35 @@
 
 <svelte:window bind:scrollY />
 
-<model-viewer
-	bind:this={viewer}
-	src="/baseball-cap.glb"
-	alt="Baseball cap"
-	camera-controls
-	disable-tap
-	disable-zoom
-	interaction-prompt="none"
-	exposure="0.5"
-></model-viewer>
+<figure class="group relative">
+	<model-viewer
+		src="/baseball-cap.glb"
+		alt="Baseball cap"
+		camera-controls
+		disable-tap
+		disable-zoom
+		interaction-prompt="none"
+		exposure="0.5"
+		bind:this={viewer}
+	>
+	</model-viewer>
+
+	<h2
+		class="pointer-events-none absolute inset-0 z-1 grid place-content-center font-serif leading-none mix-blend-difference transition-opacity group-not-hover:opacity-0 md:h3"
+	>
+		{@render children()}
+	</h2>
+</figure>
 
 <style>
 	model-viewer {
+		--columns: 5;
 		display: block;
-		width: 25vw;
-		height: 25vw;
+		width: calc(100vw / var(--columns));
+		height: calc(100vw / var(--columns));
+
+		@supports (animation-timeline: view()) {
+			--columns: 4;
+		}
 	}
 </style>

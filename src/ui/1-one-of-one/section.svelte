@@ -20,7 +20,7 @@
 	</h2>
 
 	<P
-		class="col-span-full text-center text-xl leading-relaxed md:col-[2/-2]"
+		class="col-span-full px-lh text-center text-xl leading-relaxed md:col-[2/-2]"
 		options={{
 			start: 'top 90%',
 			end: 'top 30%',

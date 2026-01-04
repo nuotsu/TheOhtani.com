@@ -2,7 +2,7 @@
 	import { links } from '$lib/store'
 </script>
 
-<nav class="fixed top-1/2 left-0 z-2 -translate-y-1/2 mix-blend-difference">
+<nav class="fixed top-1/2 left-0 z-2 -translate-y-1/2 font-serif mix-blend-difference">
 	<ol>
 		{#each links as { href, label }, i}
 			<li style:--delay="{i * 20}ms">
@@ -11,7 +11,9 @@
 						class="order-last transition-[opacity,translate] delay-(--delay) before:bg-current/50"
 					>
 						<span>
-							<kbd title={`Press "${label.slice(0, 1).toLowerCase()}" or "${i + 1}" to navigate`}
+							<kbd
+								class="font-serif"
+								title={`Press "${label.slice(0, 1).toLowerCase()}" or "${i + 1}" to navigate`}
 								>{label.slice(0, 1)}</kbd
 							>{label.slice(1)}
 						</span>

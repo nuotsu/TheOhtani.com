@@ -54,4 +54,26 @@
 			opacity: 0;
 		}
 	}
+
+	p {
+		animation: fade-in ease-in-out;
+		animation-timeline: view();
+	}
+
+	@keyframes fade-in {
+		0% {
+			translate: 0 1lh;
+			opacity: 0;
+			filter: blur(1ch);
+		}
+
+		25% {
+			filter: none;
+		}
+
+		50% {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
 </style>

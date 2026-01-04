@@ -1,11 +1,21 @@
 <script lang="ts">
 	import Cap from './cap.svelte'
+
+	const teams = [
+		'Hanamaki Higashi High School',
+		'Hokkaido Nippon-Ham Fighters',
+		'Team Japan',
+		'Los Angeles Angels',
+		'Los Angeles Dodgers',
+	]
 </script>
 
-<aside class="overflow-clip">
+<aside class="overflow-clip text-center text-balance">
 	<div class="flex flex-nowrap *:shrink-0 *:grow">
-		{#each Array(5) as _, i}
-			<Cap rotateOffset={i * 90} />
+		{#each teams as team, i}
+			<Cap rotateOffset={i * 90}>
+				{team}
+			</Cap>
 		{/each}
 	</div>
 </aside>

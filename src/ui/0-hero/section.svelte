@@ -5,8 +5,8 @@
 
 <header class="grid-system min-h-svh p-lh">
 	<hgroup class="relative col-span-full mt-auto max-w-max max-md:row-[2/3] md:col-span-2">
-		<h1 class="flex flex-col uppercase">
-			<Count>Shohei</Count>
+		<h1 class="flex flex-col font-serif uppercase">
+			<Count class="leading-none italic">Shohei</Count>
 			<span class="h0 whitespace-nowrap">
 				<Count>Ohtani</Count>
 			</span>

@@ -67,6 +67,10 @@
 	@apply font-serif text-4xl;
 }
 
+@utility h3 {
+	@apply font-serif text-3xl;
+}
+
 @utility text-trim {
 	text-box-trim: trim-both;
 	text-box-edge: cap alphabetic;
