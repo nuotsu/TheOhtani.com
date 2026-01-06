@@ -19,7 +19,7 @@
 	class="relative z-2 mt-[25lvh] grid-system min-h-lvh gap-y-0 overflow-clip *:pt-[2lh] max-md:bg-foreground *:max-md:col-span-full *:max-md:px-lh md:px-lh *:md:bg-foreground *:md:pb-lh"
 >
 	<hgroup class="flex flex-col justify-between max-md:contents">
-		<div class="relative mr-auto max-w-max max-md:col-span-full max-md:px-lh max-md:pt-[2lh]">
+		<div class="relative z-1 mr-auto max-w-max max-md:col-span-full max-md:px-lh max-md:pt-[2lh]">
 			<h2 class="h2"><Count>The Ohtani.</Count></h2>
 			<Signature
 				class="absolute -right-[.8lh] -bottom-[.5ch] h-[2lh] translate-1/2"

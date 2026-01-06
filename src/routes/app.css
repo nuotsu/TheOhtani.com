@@ -9,7 +9,7 @@
 	--font-serif: 'Instrument Serif', serif;
 	--font-mono: 'Geist Mono', monospace;
 
-	--color-dodger-blue: #005a9d;
+	--color-dodger-blue: dodgerblue; /* #005a9d */
 	--color-dodger-red: #ef3e42;
 
 	--spacing-ch: 1ch;
@@ -23,6 +23,10 @@
 	html {
 		scroll-behavior: smooth;
 		@apply no-scrollbar;
+	}
+
+	::selection {
+		@apply bg-dodger-blue text-white;
 	}
 
 	:focus-visible {
@@ -77,6 +81,30 @@
 }
 
 /* components */
+
+@property --action-offset {
+	syntax: '<percentage>';
+	initial-value: 100%;
+	inherits: true;
+}
+
+@utility action {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5ch;
+	padding: 0 1ch;
+	transition: var(--default-transition-duration) ease-in-out;
+	transition-property: background-color, --action-offset;
+	@apply not-hover:bg-current/15 hover:text-white hover:[--action-offset:0%];
+
+	&::before {
+		content: '';
+		@apply absolute inset-0 bg-dodger-blue mix-blend-color;
+		clip-path: inset(0 var(--action-offset) 0 0);
+	}
+}
 
 @utility link {
 	@apply underline decoration-current/10 hover:decoration-current/50;

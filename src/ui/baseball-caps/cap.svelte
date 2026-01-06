@@ -54,7 +54,7 @@
 
 <svelte:window bind:scrollY />
 
-<figure class="group relative">
+<figure class="group relative select-none">
 	<model-viewer
 		src="/baseball-cap.glb"
 		alt="Baseball cap"

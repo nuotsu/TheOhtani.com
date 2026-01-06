@@ -3,7 +3,9 @@
 	import FaceLooker from '$ui/face-looker.svelte'
 </script>
 
-<div class="mt-auto max-md:order-last max-md:col-span-full max-md:px-lh max-md:pt-[2lh]">
+<div
+	class="mt-auto select-none max-md:order-last max-md:col-span-full max-md:px-lh max-md:pt-[2lh]"
+>
 	<figure class="relative w-full touch-none overflow-hidden max-md:w-[max(50%,200px)]">
 		<enhanced:img
 			src="$assets/shohei-face.jpg?w=1000"

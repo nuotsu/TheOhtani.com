@@ -1,5 +1,12 @@
 <script lang="ts">
-	const feats: { title: string; description: string; dates: string[] }[] = [
+	import YouTubeModal from '$ui/youtube-modal.svelte'
+
+	const feats: {
+		title: string
+		description: string
+		dates: string[]
+		youtube?: string
+	}[] = [
 		{
 			title: 'Most Unanimous MVPs',
 			description:
@@ -46,6 +53,7 @@
 			description:
 				'Ohtani became the only player in MLB history to record 50 home runs and 50 stolen bases in a single season.',
 			dates: ['Sept 2024'],
+			youtube: '-jYfC4YYXIw',
 		},
 		{
 			title: 'Fastest to 40/40',
@@ -64,18 +72,19 @@
 			description:
 				'Ohtani hit 3 home runs and struck out 10 batters over 6 scoreless innings, leading the Dodgers to the World Series. Joined Bob Gibson as the only pitchers with 10+ Ks and a HR in the same postseason game',
 			dates: ['Postseason 2025'],
+			youtube: 'iFvryLA67bQ',
 		},
 	]
 </script>
 
 <dl class="col-span-full grid grid-cols-subgrid gap-lh md:col-span-2 md:row-[1/4]">
-	{#each feats as { title, description, dates } (title)}
+	{#each feats as { title, description, dates, youtube: youtubeId } (title)}
 		<div class="col-span-full grid grid-cols-subgrid">
-			<dt class="text-right text-balance max-md:col-span-2">
-				{title}
+			<dt class="flex flex-col gap-[.25ch] text-right text-balance max-md:col-span-2">
+				<h3 class="font-serif text-xl leading-tight">{title}</h3>
 
 				{#if dates}
-					<div class="mt-[.25ch] gap-x-ch text-sm">
+					<div class="gap-x-ch text-sm">
 						{#each dates as date, i}
 							<button
 								class="not-hover:text-neutral-400 not-hover:transition-[color]"
@@ -99,6 +108,10 @@
 
 			<dd class="max-md:col-span-2">
 				{description}
+
+				{#if youtubeId}
+					<YouTubeModal {youtubeId} class="text-sm">Watch video</YouTubeModal>
+				{/if}
 			</dd>
 		</div>
 	{/each}
