@@ -41,10 +41,8 @@
 	<O />
 	<H />
 	<T />
-
-	<BaseballCaps />
-
 	<A />
+	<BaseballCaps />
 	<N />
 	<I />
 </main>

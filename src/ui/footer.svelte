@@ -15,7 +15,7 @@
 
 <footer
 	id="footer"
-	class="relative z-2 mt-[25lvh] grid-system min-h-lvh gap-y-0 overflow-clip *:pt-lh max-md:bg-foreground *:max-md:col-span-full *:max-md:px-lh md:px-lh *:md:bg-foreground *:md:pb-lh"
+	class="relative z-2 mt-[25lvh] grid-system min-h-lvh gap-y-0 overflow-clip *:pt-[2lh] max-md:bg-foreground *:max-md:col-span-full *:max-md:px-lh md:px-lh *:md:bg-foreground *:md:pb-lh"
 >
 	<hgroup>
 		<div class="relative max-w-max">

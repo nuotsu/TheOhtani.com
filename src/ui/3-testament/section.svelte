@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { activateTableOfContents, intersectionObserver } from '$lib/intersection-observer'
 	import Count from '$ui/count.svelte'
+	import JapanToAmerica from '$ui/japan-to-america.svelte'
 </script>
 
 <section
@@ -28,9 +29,11 @@
 		</p>
 	</div>
 
-	<p class="col-span-full my-auto text-center text-balance md:col-[2/-2]">
+	<p class="col-span-full mt-[4lh] text-center text-balance md:col-[2/-2]">
 		December 9, 2017. His testament complete. The posting granted. America awaited.
 	</p>
+
+	<JapanToAmerica class="col-span-full" />
 </section>
 
 <style>

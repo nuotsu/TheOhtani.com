@@ -1,11 +1,15 @@
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ fetch }) => {
-	const viewsResponse = await fetch('/api/views')
+	const [viewsResponse, statsResponse, worldResponse] = await Promise.all([
+		fetch('/api/views'),
+		fetch('/api/stats'),
+		fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json'),
+	])
+
 	const { views } = (await viewsResponse.json()) satisfies App.ViewsResponse
-
-	const statsResponse = await fetch('/api/stats')
 	const stats = (await statsResponse.json()) satisfies App.StatsResponse
+	const worldData = await worldResponse.json()
 
-	return { views, stats }
+	return { views, stats, worldData }
 }
