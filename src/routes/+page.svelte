@@ -9,7 +9,7 @@
 	import I from '$ui/6-icon/section.svelte'
 	import BaseballCaps from '$ui/baseball-caps/section.svelte'
 	import Facade from '$ui/facade.svelte'
-	import Footer from '$ui/footer.svelte'
+	import Footer from '$ui/footer/footer.svelte'
 	import Progress from '$ui/progress.svelte'
 	import TableOfContents from '$ui/table-of-contents.svelte'
 
@@ -18,7 +18,7 @@
 
 <svelte:window bind:innerHeight />
 
-<Facade />
+<!-- <Facade /> -->
 <Hero />
 <TableOfContents />
 
