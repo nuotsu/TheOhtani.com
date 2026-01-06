@@ -13,8 +13,6 @@
 
 ## Ideas
 
-- grid system (12-columns)
-- GSAP
 - stats (season, career)
   - data viz
 - bobblehead index
@@ -22,7 +20,7 @@
 - words that describe ohtani
   - unicorn 🦄🦄🦄
   - GOAT 🐐🐐🐐
-  - humble  
+  - humble
   - stoic
 - Faces
   - face tracker
@@ -31,6 +29,7 @@
 - bento box
 - image filters (aged MLB photos)
 - Ohtani merch (his brand, New Balance, Boss, SEIKO, etc)
+- decorte swipe section transition?
 
 ## Inspiration / Moodboard
 
