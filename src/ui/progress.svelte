@@ -10,7 +10,7 @@
 
 <aside
 	id="progress"
-	class="fixed right-0 bottom-0 z-2 px-ch tabular-nums mix-blend-difference [writing-mode:vertical-lr]"
+	class="fixed right-0 bottom-0 z-3 px-ch tabular-nums mix-blend-difference [writing-mode:vertical-lr]"
 >
 	{progress}
 	<small>mph</small>
