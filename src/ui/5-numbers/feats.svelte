@@ -1,11 +1,9 @@
 <script lang="ts">
-	import YouTubeModal from '$ui/youtube-modal.svelte'
-
 	const feats: {
 		title: string
 		description: string
 		dates: string[]
-		youtube?: string
+		external?: string
 	}[] = [
 		{
 			title: 'Most Unanimous MVPs',
@@ -53,7 +51,7 @@
 			description:
 				'Ohtani became the only player in MLB history to record 50 home runs and 50 stolen bases in a single season.',
 			dates: ['Sept 2024'],
-			youtube: '-jYfC4YYXIw',
+			external: 'https://www.youtube.com/watch?v=-jYfC4YYXIw',
 		},
 		{
 			title: 'Fastest to 40/40',
@@ -70,15 +68,15 @@
 		{
 			title: '3 HRs + 10 Ks, NLCS Game 4',
 			description:
-				'Ohtani hit 3 home runs and struck out 10 batters over 6 scoreless innings, leading the Dodgers to the World Series. Joined Bob Gibson as the only pitchers with 10+ Ks and a HR in the same postseason game',
+				'Ohtani hit 3 home runs and struck out 10 batters over 6 scoreless innings, leading the Dodgers to the World Series. Joined Bob Gibson as the only pitchers with 10+ Ks and a HR in the same postseason game.',
 			dates: ['Postseason 2025'],
-			youtube: 'iFvryLA67bQ',
+			external: 'https://www.youtube.com/watch?v=iFvryLA67bQ',
 		},
 	]
 </script>
 
 <dl class="col-span-full grid grid-cols-subgrid gap-lh md:col-span-2 md:row-[1/4]">
-	{#each feats as { title, description, dates, youtube: youtubeId } (title)}
+	{#each feats as { title, description, dates, external } (title)}
 		<div class="col-span-full grid grid-cols-subgrid">
 			<dt class="flex flex-col gap-[.25ch] text-right text-balance max-md:col-span-2">
 				<h3 class="font-serif text-xl leading-tight">{title}</h3>
@@ -109,8 +107,16 @@
 			<dd class="max-md:col-span-2">
 				{description}
 
-				{#if youtubeId}
-					<YouTubeModal {youtubeId} class="text-sm">Watch video</YouTubeModal>
+				{#if external}
+					<a class="action mt-1 ml-1 text-sm" href={external} target="_blank">
+						{#if external.includes('youtube')}
+							Watch video
+							<!-- prettier-ignore -->
+							<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
+						{:else}
+							Read more
+						{/if}
+					</a>
 				{/if}
 			</dd>
 		</div>
@@ -147,5 +153,10 @@
 			translate: 0 0;
 			opacity: 1;
 		}
+	}
+
+	svg {
+		width: 1.8ch;
+		height: 1.8ch;
 	}
 </style>

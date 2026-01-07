@@ -93,8 +93,8 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: 0.5ch;
-	padding: 0 1ch;
+	gap: 1ch;
+	padding: 0.2ch 1ch;
 	transition: var(--default-transition-duration) ease-in-out;
 	transition-property: background-color, --action-offset;
 	@apply not-hover:bg-current/15 hover:text-white hover:[--action-offset:0%];
