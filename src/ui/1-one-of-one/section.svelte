@@ -21,6 +21,7 @@
 
 	<P
 		class="col-span-full px-lh text-center text-xl leading-relaxed md:col-[2/-2]"
+		startingOpacity={0.15}
 		options={{
 			start: 'top 90%',
 			end: 'top 30%',

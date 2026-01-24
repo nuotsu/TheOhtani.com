@@ -16,6 +16,7 @@
 			description:
 				'Ohtani is the only player in MLB history to be selected as an All-Star as both a pitcher and a position player in the same season, a feat he accomplished three times.',
 			dates: ['2021', '2022', '2023'],
+			external: 'https://www.youtube.com/watch?v=f8lnXO_mQjs',
 		},
 		{
 			title: 'Ohtani Rule',
@@ -75,11 +76,11 @@
 	]
 </script>
 
-<dl class="col-span-full grid grid-cols-subgrid gap-lh md:col-span-2 md:row-[1/4]">
+<dl class="col-span-full grid grid-cols-subgrid gap-lh md:gap-[1.5lh] md:col-span-2 md:row-[1/4]">
 	{#each feats as { title, description, dates, external } (title)}
 		<div class="col-span-full grid grid-cols-subgrid">
 			<dt class="flex flex-col gap-[.25ch] text-right text-balance max-md:col-span-2">
-				<h3 class="font-serif text-xl leading-tight">{title}</h3>
+				<h3 class="font-serif text-2xl leading-tight">{title}</h3>
 
 				{#if dates}
 					<div class="gap-x-ch text-sm">

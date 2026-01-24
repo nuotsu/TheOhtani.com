@@ -16,7 +16,7 @@
 
 <footer
 	id="footer"
-	class="relative z-2 mt-[25lvh] grid-system min-h-lvh gap-y-0 overflow-clip *:pt-[2lh] max-md:bg-foreground *:max-md:col-span-full *:max-md:px-lh md:px-lh *:md:bg-foreground *:md:pb-lh"
+	class="relative z-2 grid-system min-h-lvh gap-y-0 overflow-clip *:pt-[2lh] max-md:bg-foreground *:max-md:col-span-full *:max-md:px-lh md:px-lh *:md:bg-foreground *:md:pb-lh [&>*+*]:md:border-l-[.5px] *:border-current/20!"
 >
 	<hgroup class="flex flex-col justify-between max-md:contents">
 		<div class="relative z-1 mr-auto max-w-max max-md:col-span-full max-md:px-lh max-md:pt-[2lh]">
@@ -30,16 +30,19 @@
 		<Face />
 	</hgroup>
 
-	<menu>
-		<li><Share /></li>
-		<!-- <li><button>View on Awwwards</button></li> -->
-		<li><ShowGridToggle /></li>
-		<li><a class="link" href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
-		<li><ViewCount /></li>
-	</menu>
+	<div>
+		<h2 class="technical text-current/50">Site</h2>
+		<menu>
+			<li><Share /></li>
+			<!-- <li><button>View on Awwwards</button></li> -->
+			<li><ShowGridToggle /></li>
+			<li><a class="link" href="https://github.com/nuotsu/theohtani.com">View on GitHub</a></li>
+			<li><ViewCount /></li>
+		</menu>
+	</div>
 
 	<div>
-		<h2 class="text-current/50">Inspiration / Credits:</h2>
+		<h2 class="text-current/50 technical">Inspiration / Credits</h2>
 
 		<ul>
 			{#each inspiration as { label, href }}
@@ -53,7 +56,11 @@
 	<div
 		class="flex justify-between gap-lh max-md:order-last max-md:pb-lh max-md:[--y:0]! md:flex-col"
 	>
-		<p>Created by <a class="link" href="https://nuotsu.dev">nuotsu</a></p>
+		<div>
+			<div class="technical text-current/50">About</div>
+			<p>Created by <a class="link" href="https://nuotsu.dev">nuotsu</a></p>
+		</div>
+		
 		<small class="mt-auto text-right">© {new Date().getFullYear()}</small>
 	</div>
 </footer>

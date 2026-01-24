@@ -17,7 +17,7 @@
 			<Count stagger={0.05}>Numbers.</Count>
 		</h2>
 
-		<p>
+		<p class="text-lg text-balance technical">
 			The digits that define dominance. The statistics that shattered expectations. The records that
 			will echo through eternity.
 		</p>

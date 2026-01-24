@@ -6,11 +6,13 @@
 
 	let {
 		children,
+		startingOpacity = 0,
 		options = {
 			end: 'top 0%',
 		},
 		...props
 	}: {
+		startingOpacity?: number
 		options?: ScrollTrigger.Vars
 		children: Snippet
 	} & HTMLAttributes<HTMLParagraphElement> = $props()
@@ -31,7 +33,9 @@
 			},
 		})
 
-		timeline.to(chars, {
+		timeline.fromTo(chars, {
+			opacity: startingOpacity,
+		}, {
 			opacity: 1,
 			stagger: 0.02,
 			ease: 'power2.out',

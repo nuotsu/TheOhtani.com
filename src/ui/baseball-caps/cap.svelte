@@ -56,7 +56,7 @@
 
 <figure class="group relative select-none">
 	<model-viewer
-		src="/baseball-cap.glb"
+		src="/models/baseball-cap.glb"
 		alt="Baseball cap"
 		camera-controls
 		disable-tap

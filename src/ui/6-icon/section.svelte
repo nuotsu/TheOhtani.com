@@ -6,15 +6,21 @@
 	let innerHeight = $state(0)
 </script>
 
+<svelte:head>
+	<link rel="preload" href="/videos/ohtani-back.mp4" as="video" type="video/mp4" />
+</svelte:head>
+
 <svelte:window bind:innerHeight />
 
 <section
 	id="icon"
-	class="grid-system"
+	class="grid-system relative pb-[25lvh]"
 	{@attach intersectionObserver(activateTableOfContents[0], {
 		rootMargin: `${innerHeight / 2}px 0px 0px 0px`,
 	})}
 >
+	<video class="absolute inset-0 mask-b-from-50% opacity-50 -z-1 size-full object-cover" src="/videos/ohtani-back.mp4" autoplay muted loop></video>
+
 	<h2 class="top-rlh col-span-full h2 md:sticky">
 		<Count>Icon.</Count>
 	</h2>

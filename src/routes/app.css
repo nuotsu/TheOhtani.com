@@ -80,6 +80,10 @@
 	text-box-edge: cap alphabetic;
 }
 
+@utility technical {
+	@apply font-mono uppercase;
+}
+
 /* components */
 
 @property --action-offset {

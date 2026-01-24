@@ -2,7 +2,7 @@
 	import { links } from '$lib/store'
 </script>
 
-<nav class="fixed top-1/2 left-0 z-2 -translate-y-1/2 font-serif mix-blend-difference">
+<nav class="fixed top-1/2 left-0 z-2 -translate-y-1/2 font-serif mix-blend-difference text-lg">
 	<ol>
 		{#each links as { href, label }, i}
 			<li style:--delay="{i * 20}ms">
