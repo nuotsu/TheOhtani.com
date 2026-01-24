@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import posthog from 'posthog-js'
 import type { LayoutLoad } from './$types'
+import '$lib/console'
 
 export const load: LayoutLoad = async () => {
 	if (browser) {

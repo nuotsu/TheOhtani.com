@@ -7,7 +7,7 @@
 
 <section
 	id="numbers"
-	class="grid-system p-lh"
+	class="grid-system p-lh pb-[3lh]!"
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
 	<header
