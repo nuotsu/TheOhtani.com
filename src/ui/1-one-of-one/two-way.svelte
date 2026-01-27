@@ -59,7 +59,7 @@
 <figure
 	class="pointer-events-none sticky bottom-0 -z-1 col-span-full flex items-end justify-between grayscale"
 >
-	<div id="pitching-shohei" bind:this={pitchingShohei}>
+	<div id="pitching-shohei" class="transform-gpu will-change-transform" bind:this={pitchingShohei}>
 		<enhanced:img
 			src="$assets/pitching-shohei.png"
 			loading="lazy"
@@ -68,7 +68,7 @@
 		/>
 	</div>
 
-	<div id="hitting-shohei" bind:this={hittingShohei}>
+	<div id="hitting-shohei" class="transform-gpu will-change-transform" bind:this={hittingShohei}>
 		<enhanced:img
 			src="$assets/hitting-shohei.png"
 			loading="lazy"
@@ -84,14 +84,7 @@
 		width: auto;
 	}
 
-	#pitching-shohei,
-	#hitting-shohei {
-		position: absolute;
-		bottom: 0;
-	}
-
 	#pitching-shohei {
-		left: 0;
 		height: 50lvh;
 
 		:global(img) {
@@ -100,7 +93,6 @@
 	}
 
 	#hitting-shohei {
-		right: 0;
 		height: 67lvh;
 
 		:global(img) {
