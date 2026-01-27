@@ -24,7 +24,7 @@
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.4.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",
-		"svelte": "^5.48.2",
+		"svelte": "^5.48.3",
 		"svelte-check": "^4.3.5",
 		"tailwindcss": "^4.1.18",
 		"typescript": "^5.9.3",
@@ -35,7 +35,7 @@
 		"@ianvs/prettier-plugin-sort-imports": "^4.7.0",
 		"d3-geo": "^3.1.1",
 		"gsap": "^3.14.2",
-		"posthog-js": "^1.335.2",
+		"posthog-js": "^1.335.3",
 		"posthog-node": "^5.24.2",
 		"topojson-client": "^3.1.0"
 	}
