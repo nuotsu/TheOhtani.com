@@ -2,7 +2,7 @@
 	import { links } from '$lib/store'
 </script>
 
-<nav class="fixed top-1/2 left-0 z-2 -translate-y-1/2 font-serif mix-blend-difference text-lg">
+<nav class="fixed top-1/2 left-0 z-2 -translate-y-1/2 font-serif text-lg mix-blend-difference">
 	<ol>
 		{#each links as { href, label }, i}
 			<li style:--delay="{i * 20}ms">
@@ -68,8 +68,11 @@
 
 	a::before {
 		content: counter(i, upper-roman);
+		display: grid;
+		place-content: center;
 		text-align: center;
-		width: 1lh;
+		width: 1rlh;
+		font-size: 0.8em;
 	}
 
 	a > span {

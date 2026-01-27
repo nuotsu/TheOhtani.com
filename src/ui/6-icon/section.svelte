@@ -14,12 +14,19 @@
 
 <section
 	id="icon"
-	class="grid-system relative pb-[25lvh]"
+	class="relative grid-system pb-[25lvh]"
 	{@attach intersectionObserver(activateTableOfContents[0], {
 		rootMargin: `${innerHeight / 2}px 0px 0px 0px`,
 	})}
 >
-	<video class="absolute inset-0 mask-b-from-50% opacity-50 -z-1 size-full object-cover" src="/videos/ohtani-back.mp4" autoplay muted loop></video>
+	<video
+		class="pointer-events-none absolute inset-0 -z-1 size-full mask-b-from-50% object-cover opacity-50"
+		src="/videos/ohtani-back.mp4"
+		autoplay
+		muted
+		loop
+		playsinline
+	></video>
 
 	<h2 class="top-rlh col-span-full h2 md:sticky">
 		<Count>Icon.</Count>

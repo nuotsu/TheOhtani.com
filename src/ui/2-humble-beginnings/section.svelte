@@ -19,31 +19,31 @@
 
 	<div class="col-span-full row-[2/3] grid grid-cols-subgrid gap-lh *:space-y-ch">
 		<div class="max-md:col-[1/-2]">
-			<h3 class="font-serif text-2xl">Ōshū, Iwate Prefecture. July 5, 1994.</h3>
+			<h3 class="font-serif text-2xl text-balance">Ōshū, Iwate Prefecture. July 5, 1994.</h3>
 			<p>
-				A small city in northern Japan where winter winds shape
-				character and discipline is inherited.
+				A small city in northern Japan where winter winds shape character and discipline is
+				inherited.
 			</p>
 		</div>
 		<div class="max-md:col-[2/-1] md:mt-lh">
-			<h3 class="font-serif text-2xl">Young Shohei.</h3>
+			<h3 class="font-serif text-2xl text-balance">Young Shohei.</h3>
 			<p>
-				Young Shohei played baseball with his father, a factory worker. His mother, a former badminton
-				player, taught him the value of dedication. Humble origins. Infinite ambition.
+				Young Shohei played baseball with his father, a factory worker. His mother, a former
+				badminton player, taught him the value of dedication. Humble origins. Infinite ambition.
 			</p>
 		</div>
 		<div class="max-md:col-[1/-2] md:mt-[2lh]">
-			<h3 class="font-serif text-2xl">Hanamaki Higashi High School. 2010-2012.</h3>
+			<h3 class="font-serif text-2xl text-balance">Hanamaki Higashi High School. 2010-2012.</h3>
 			<p>
-				Here he created his famous mandala chart—64 goals
-				mapping the path to greatness. Every detail planned. Every sacrifice calculated.
+				Here he created his famous mandala chart—64 goals mapping the path to greatness. Every
+				detail planned. Every sacrifice calculated.
 			</p>
 		</div>
 		<div class="max-md:col-[2/-1] md:mt-[3lh]">
-			<h3 class="font-serif text-2xl">Spring Kōshien. 2012.</h3>
+			<h3 class="font-serif text-2xl text-balance">Spring Kōshien. 2012.</h3>
 			<p>
-				His team fell short of glory, but the nation glimpsed his 100 mph
-				fastball. Scouts circled. Destiny waited.
+				His team fell short of glory, but the nation glimpsed his 100 mph fastball. Scouts circled.
+				Destiny waited.
 			</p>
 		</div>
 	</div>
