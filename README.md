@@ -1,5 +1,10 @@
 # [TheOhtani.com](https://theohtani.com)
 
+> The player who _redefined impossible._ <br>
+> A digital monument to the greatest player of all time.
+
+![footer screenshot](/screenshot.png)
+
 ## Sections
 
 0. Hero

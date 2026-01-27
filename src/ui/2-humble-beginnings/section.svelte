@@ -74,7 +74,7 @@
 >
 	<Field />
 
-	<header class="absolute bottom-rlh left-[5vw] z-10">
+	<header class="absolute bottom-rlh left-rlh z-10">
 		<h2 class="h2">
 			<Count stagger={0.03}>Humble Beginnings.</Count>
 		</h2>

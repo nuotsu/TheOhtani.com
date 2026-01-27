@@ -2,7 +2,7 @@
 	import Count from '$ui/count.svelte'
 	import Share from '$ui/share.svelte'
 	import { ShowGrid, ShowGridToggle } from '$ui/show-grid'
-	import Signature from '$ui/signature/signature-en.svelte'
+	import SignatureEN from '$ui/signature/signature-en.svelte'
 	import ViewCount from '$ui/view-count.svelte'
 	import Face from './face.svelte'
 
@@ -21,7 +21,7 @@
 	<hgroup class="flex flex-col justify-between max-md:contents">
 		<div class="relative z-1 mr-auto max-w-max max-md:col-span-full max-md:px-lh max-md:pt-[2lh]">
 			<h2 class="h2"><Count>The Ohtani.</Count></h2>
-			<Signature
+			<SignatureEN
 				class="absolute -right-[.8lh] -bottom-[.5ch] h-[2lh] translate-1/2"
 				delay={6 * 0.1}
 			/>
@@ -31,7 +31,7 @@
 	</hgroup>
 
 	<div>
-		<h2 class="technical text-current/50">Site</h2>
+		<h2 class="technical font-mono text-current/50">Site</h2>
 		<menu>
 			<li><Share /></li>
 			<!-- <li><button>View on Awwwards</button></li> -->
@@ -42,7 +42,7 @@
 	</div>
 
 	<div>
-		<h2 class="technical text-current/50">Inspiration / Credits</h2>
+		<h2 class="technical font-mono text-current/50">Inspiration / Credits</h2>
 
 		<ul>
 			{#each inspiration as { label, href }}
@@ -57,7 +57,7 @@
 		class="flex justify-between gap-lh max-md:order-last max-md:pb-lh max-md:[--y:0]! md:flex-col"
 	>
 		<div>
-			<div class="technical text-current/50">About</div>
+			<div class="technical font-mono text-current/50">About</div>
 			<p>Created by <a class="link" href="https://nuotsu.dev">nuotsu</a></p>
 		</div>
 

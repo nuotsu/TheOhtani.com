@@ -9,6 +9,7 @@
 	--font-serif: 'Instrument Serif', serif;
 	--font-mono: 'Geist Mono', monospace;
 	--font-numeric: 'Bitcount Single', monospace;
+	--font-technical: 'Workbench', monospace;
 
 	--color-dodger-blue: dodgerblue; /* #005a9d */
 	--color-dodger-red: #ef3e42;
@@ -82,7 +83,7 @@
 }
 
 @utility technical {
-	@apply font-mono uppercase;
+	@apply font-technical uppercase;
 }
 
 /* components */

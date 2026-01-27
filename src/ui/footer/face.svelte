@@ -22,7 +22,7 @@
 	</figure>
 
 	<div class="absolute top-[30%] left-[51%] -translate-1/2 rotate-90 md:top-[2%] md:left-[85%]">
-		<SignatureJP class="h-[2lh] max-w-max lg:h-[3lh]" duration={0.017} />
+		<SignatureJP class="h-[2lh] max-w-max lg:h-[2.7lh]" duration={0.017} />
 	</div>
 </div>
 

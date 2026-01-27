@@ -29,7 +29,9 @@
 		</p>
 	</div>
 
-	<p class="col-span-full mt-[4lh] text-center text-balance md:col-[2/-2]">
+	<p
+		class="col-span-full mx-auto mt-[4lh] max-w-xl text-center font-technical text-xl text-balance md:col-[2/-2]"
+	>
 		December 9, 2017. His testament complete. The posting granted. America awaited.
 	</p>
 
