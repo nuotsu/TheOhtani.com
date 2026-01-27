@@ -15,7 +15,7 @@
 		<Signature class="absolute -right-lh bottom-0 h-[2lh] translate-1/2" delay={6 * 0.1} />
 	</hgroup>
 
-	<div class="mt-auto max-md:space-y-ch md:col-span-2 text-lg md:text-xl technical text-balance">
+	<div class="mt-auto technical text-lg text-balance max-md:space-y-ch md:col-span-2 md:text-xl">
 		<p>The player who redefined impossible.</p>
 		<p>A digital monument to the greatest player of all time.</p>
 	</div>

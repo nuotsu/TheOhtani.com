@@ -18,7 +18,9 @@
 >
 	<Select bind:value={selectedSeason} {options} />
 
-	<dl class="col-span-full grid grid-cols-2 gap-x-rlh text-5xl md:grid-cols-[1fr_auto]">
+	<dl
+		class="col-span-full grid grid-cols-2 gap-x-rlh text-5xl leading-[0.75] md:grid-cols-[1fr_auto]"
+	>
 		{@render stat('AVG', 'hitting', ['avg'], 'Batting average')}
 		{@render stat('HR', 'hitting', ['homeRuns'], 'Home runs')}
 		{@render stat('RBI', 'hitting', ['rbi'], 'Runs batted in')}
@@ -33,9 +35,9 @@
 	{#key selectedSeason}
 		{@const stats = statsResponse[selectedSeason][group]}
 		{#if stats}
-			<dt class="text-right font-bold tabular-nums">
+			<dt class="text-right font-light tabular-nums">
 				<Count
-					class="inline-block aria-[label='']:text-current/50 aria-[label='']:before:content-['-']"
+					class="inline-flex items-end font-numeric aria-[label='']:text-current/50 aria-[label='']:before:content-['-']"
 					stagger={0.1}
 				>
 					{key
