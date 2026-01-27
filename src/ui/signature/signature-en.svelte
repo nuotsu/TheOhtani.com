@@ -9,12 +9,12 @@
 </script>
 
 <DrawSVG
-	class="signature {className}"
-	height="50"
+	class="signature-en {className}"
 	viewBox="84.78227997 39.56233215 251.82424927 127.73843384"
 	width="100"
+	height="50"
 	xmlns="http://www.w3.org/2000/svg"
-	aria-label="Shohei Ohtani's signature"
+	aria-label="Shohei Ohtani's signature (English)"
 	{...props}
 >
 	<!-- prettier-ignore -->
@@ -22,7 +22,7 @@
 </DrawSVG>
 
 <style>
-	:global(.signature) {
+	:global(.signature-en) {
 		opacity: 0;
 		animation: fade 0.1s ease-in-out var(--delay, 0s) forwards;
 	}

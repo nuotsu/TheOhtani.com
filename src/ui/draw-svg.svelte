@@ -8,11 +8,13 @@
 		children,
 		options,
 		delay,
+		duration = 0.02,
 		...props
 	}: {
 		children: Snippet
 		options?: IntersectionObserverInit
 		delay?: gsap.TweenValue
+		duration?: number
 	} & SVGAttributes<SVGSVGElement> = $props()
 
 	let elem: SVGSVGElement | null = $state(null)
@@ -34,7 +36,7 @@
 				{ drawSVG: '0%' },
 				{
 					drawSVG: '100%',
-					duration: 0.02,
+					duration,
 					ease: 'power2.out',
 				},
 			)

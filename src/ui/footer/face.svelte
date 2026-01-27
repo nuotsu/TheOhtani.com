@@ -1,10 +1,11 @@
 <script lang="ts">
 	import src from '$assets/shohei-face-looker.webp'
 	import FaceLooker from '$ui/face-looker.svelte'
+	import SignatureJP from '$ui/signature/signature-jp.svelte'
 </script>
 
 <div
-	class="mt-auto select-none max-md:order-last max-md:col-span-full max-md:px-lh max-md:pt-[2lh]"
+	class="relative mt-auto select-none max-md:order-last max-md:col-span-full max-md:px-lh max-md:pt-[2lh]"
 >
 	<figure class="relative w-full touch-none overflow-hidden max-md:w-[max(50%,200px)]">
 		<enhanced:img
@@ -19,6 +20,10 @@
 			class="pointer-events-none absolute top-[23%] left-[51%] w-[40%] -translate-1/2"
 		/>
 	</figure>
+
+	<div class="absolute top-[30%] left-[51%] -translate-1/2 rotate-90 md:top-[2%] md:left-[85%]">
+		<SignatureJP class="h-[2lh] max-w-max lg:h-[3lh]" duration={0.017} />
+	</div>
 </div>
 
 <style>

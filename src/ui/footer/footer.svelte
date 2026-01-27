@@ -2,7 +2,7 @@
 	import Count from '$ui/count.svelte'
 	import Share from '$ui/share.svelte'
 	import { ShowGrid, ShowGridToggle } from '$ui/show-grid'
-	import Signature from '$ui/signature.svelte'
+	import Signature from '$ui/signature/signature-en.svelte'
 	import ViewCount from '$ui/view-count.svelte'
 	import Face from './face.svelte'
 
@@ -16,7 +16,7 @@
 
 <footer
 	id="footer"
-	class="relative z-2 grid-system min-h-lvh gap-y-0 overflow-clip *:pt-[2lh] max-md:bg-foreground *:max-md:col-span-full *:max-md:px-lh md:px-lh *:md:bg-foreground *:md:pb-lh [&>*+*]:md:border-l-[.5px] *:border-current/20!"
+	class="relative z-2 grid-system min-h-lvh gap-y-0 overflow-clip *:border-current/20! *:pt-[2lh] max-md:bg-foreground *:max-md:col-span-full *:max-md:px-lh md:px-lh *:md:bg-foreground *:md:pb-lh [&>*+*]:md:border-l-[.5px]"
 >
 	<hgroup class="flex flex-col justify-between max-md:contents">
 		<div class="relative z-1 mr-auto max-w-max max-md:col-span-full max-md:px-lh max-md:pt-[2lh]">
@@ -42,7 +42,7 @@
 	</div>
 
 	<div>
-		<h2 class="text-current/50 technical">Inspiration / Credits</h2>
+		<h2 class="technical text-current/50">Inspiration / Credits</h2>
 
 		<ul>
 			{#each inspiration as { label, href }}
@@ -60,7 +60,7 @@
 			<div class="technical text-current/50">About</div>
 			<p>Created by <a class="link" href="https://nuotsu.dev">nuotsu</a></p>
 		</div>
-		
+
 		<small class="mt-auto text-right">© {new Date().getFullYear()}</small>
 	</div>
 </footer>

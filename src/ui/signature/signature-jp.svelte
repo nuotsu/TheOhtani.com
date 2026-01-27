@@ -1,0 +1,731 @@
+<script lang="ts">
+	import DrawSVG from '$ui/draw-svg.svelte'
+	import type { SVGAttributes } from 'svelte/elements'
+
+	let {
+		class: className = '',
+		...props
+	}: { delay?: gsap.TweenValue; duration?: number } & SVGAttributes<SVGSVGElement> = $props()
+</script>
+
+<DrawSVG
+	class="signature-jp {className}"
+	viewBox="6 39 481.5 136"
+	width="708.0882352941177"
+	height="200"
+	xmlns="http://www.w3.org/2000/svg"
+	aria-label="Shohei Ohtani's signature (Japanese)"
+	{...props}
+>
+	<!-- prettier-ignore -->
+	<path d="M 44.000,139.500 C 41.967,134.585 42.250,134.500 40.500,129.500" stroke-width="4.923" stroke="currentColor" fill="none" stroke-linecap="round"></path><path
+		d="M 40.500,129.500 C 38.410,121.521 38.217,121.585 36.500,113.500"
+		stroke-width="3.188"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 36.500,113.500 C 34.614,105.778 34.660,105.771 33.000,98.000"
+		stroke-width="2.923"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 33.000,98.000 C 32.127,92.473 31.864,92.528 31.000,87.000"
+		stroke-width="3.237"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 11.000,110.000 C 18.241,114.375 18.500,113.750 26.000,117.500"
+		stroke-width="4.520"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 26.000,117.500 C 36.684,120.523 36.241,121.625 47.000,124.500"
+		stroke-width="2.834"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 47.000,124.500 C 57.388,128.710 57.434,128.523 67.500,133.500"
+		stroke-width="2.537"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 67.500,133.500 C 76.324,137.863 76.388,137.710 85.000,142.500"
+		stroke-width="2.527"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 85.000,142.500 C 91.074,145.324 90.824,145.613 96.500,149.000"
+		stroke-width="2.942"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 47.000,119.500 C 48.445,116.289 48.750,116.500 50.500,113.500"
+		stroke-width="5.190"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 50.500,113.500 C 55.479,106.764 55.445,106.789 61.000,100.500"
+		stroke-width="3.283"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 61.000,100.500 C 68.704,92.206 68.479,92.014 76.500,84.000"
+		stroke-width="2.552"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 76.500,84.000 C 82.803,77.045 82.954,77.206 89.500,70.500"
+		stroke-width="2.691"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 89.500,70.500 C 93.683,66.032 93.803,66.295 98.500,62.500"
+		stroke-width="3.086"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 116.000,124.000 C 119.481,127.022 119.500,127.000 123.000,130.000"
+		stroke-width="4.844"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 123.000,130.000 C 126.000,132.500 125.981,132.522 129.000,135.000"
+		stroke-width="4.106"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 129.000,135.000 C 132.254,137.254 132.000,137.500 135.000,140.000"
+		stroke-width="3.872"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 119.000,100.000 C 119.517,95.343 120.000,95.500 121.000,91.000"
+		stroke-width="4.826"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 121.000,91.000 C 123.514,85.256 123.017,85.093 126.000,79.500"
+		stroke-width="3.592"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 126.000,79.500 C 128.137,74.198 128.264,74.256 130.500,69.000"
+		stroke-width="3.369"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 140.500,109.500 C 144.897,112.309 144.750,112.500 149.000,115.500"
+		stroke-width="5.208"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 149.000,115.500 C 153.800,119.441 153.897,119.309 158.500,123.500"
+		stroke-width="3.664"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 158.500,123.500 C 164.735,129.018 164.800,128.941 171.000,134.500"
+		stroke-width="3.047"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 171.000,134.500 C 176.790,139.454 176.735,139.518 182.500,144.500"
+		stroke-width="2.990"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 182.500,144.500 C 187.404,149.112 187.540,148.954 192.500,153.500"
+		stroke-width="3.093"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 192.500,153.500 C 196.318,157.013 196.404,156.862 200.500,160.000"
+		stroke-width="3.368"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 145.500,110.000 C 146.533,105.776 147.000,106.000 148.500,102.000"
+		stroke-width="5.123"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 148.500,102.000 C 153.180,93.958 152.783,93.776 158.000,86.000"
+		stroke-width="3.133"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 158.000,86.000 C 164.089,76.304 163.930,76.208 170.000,66.500"
+		stroke-width="2.511"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 170.000,66.500 C 173.954,59.053 174.339,59.304 178.500,52.000"
+		stroke-width="2.725"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 178.500,52.000 C 181.452,47.963 181.204,47.803 184.500,44.000"
+		stroke-width="3.250"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 178.500,124.000 C 184.764,122.853 184.500,122.250 190.500,120.500"
+		stroke-width="4.853"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 190.500,120.500 C 194.392,118.454 194.514,118.853 198.000,116.000"
+		stroke-width="3.995"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 198.000,116.000 C 203.116,111.769 200.642,114.204 203.000,112.000"
+		stroke-width="4.011"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 195.500,118.000 C 191.023,122.782 191.500,120.250 187.500,122.500"
+		stroke-width="4.684"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 187.500,122.500 C 184.661,120.066 184.773,122.282 183.000,117.000"
+		stroke-width="4.627"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 183.000,117.000 C 181.664,113.821 181.411,114.066 181.000,110.500"
+		stroke-width="4.183"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 181.000,110.500 C 180.275,106.263 180.164,106.321 180.000,102.000"
+		stroke-width="3.806"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 180.000,102.000 C 178.883,98.101 179.775,98.513 180.000,95.000"
+		stroke-width="3.880"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 180.000,95.000 C 182.235,88.839 181.133,91.851 184.500,89.500"
+		stroke-width="4.359"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 184.500,89.500 C 188.703,93.704 188.235,90.589 192.000,98.500"
+		stroke-width="4.187"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 192.000,98.500 C 193.695,102.029 194.203,101.704 195.500,105.500"
+		stroke-width="3.892"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 195.500,105.500 C 198.408,111.918 196.945,108.279 198.500,111.000"
+		stroke-width="3.996"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 198.500,111.000 C 197.340,105.727 198.658,109.418 196.000,100.500"
+		stroke-width="4.627"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 196.000,100.500 C 194.383,96.064 194.840,95.977 193.500,91.500"
+		stroke-width="3.881"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 243.500,143.000 C 246.150,140.154 245.000,140.000 246.500,137.000"
+		stroke-width="5.346"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 233.500,124.500 C 236.270,127.020 236.500,126.500 239.500,128.500"
+		stroke-width="5.270"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 239.500,128.500 C 242.523,129.167 242.270,129.770 245.500,130.000"
+		stroke-width="4.412"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 245.500,130.000 C 248.970,130.551 248.773,130.917 252.000,132.000"
+		stroke-width="4.128"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 267.000,150.500 C 263.655,146.982 264.000,146.750 261.000,143.000"
+		stroke-width="5.145"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 261.000,143.000 C 258.300,138.600 258.155,138.732 256.000,134.000"
+		stroke-width="3.874"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 256.000,134.000 C 253.506,129.092 253.550,129.100 251.500,124.000"
+		stroke-width="3.482"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 251.500,124.000 C 248.529,118.107 250.256,120.842 249.500,117.500"
+		stroke-width="3.795"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 272.500,138.500 C 269.612,133.570 269.750,133.500 267.000,128.500"
+		stroke-width="5.063"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 288.000,149.500 C 283.931,144.710 284.250,144.500 280.500,139.500"
+		stroke-width="5.037"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 280.500,139.500 C 277.309,134.350 277.181,134.460 274.500,129.000"
+		stroke-width="3.669"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 274.500,129.000 C 272.349,124.199 272.059,124.350 270.000,119.500"
+		stroke-width="3.473"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 258.500,127.500 C 263.138,129.624 263.250,129.250 268.000,131.000"
+		stroke-width="5.162"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 268.000,131.000 C 276.517,132.929 276.388,133.374 285.000,135.000"
+		stroke-width="3.141"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 285.000,135.000 C 298.135,137.786 298.017,138.179 311.000,141.500"
+		stroke-width="2.334"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 311.000,141.500 C 322.373,144.925 322.385,144.786 333.500,149.000"
+		stroke-width="2.344"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 333.500,149.000 C 339.949,151.880 340.123,151.425 346.500,154.500"
+		stroke-width="2.811"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 263.500,106.000 C 260.109,102.490 260.500,102.250 257.500,98.500"
+		stroke-width="5.234"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 257.500,98.500 C 256.099,95.809 255.859,95.990 255.000,93.000"
+		stroke-width="4.474"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 255.000,93.000 C 253.959,90.013 253.849,90.059 253.000,87.000"
+		stroke-width="4.099"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 253.000,87.000 C 250.483,82.678 252.209,84.513 251.500,82.000"
+		stroke-width="4.614"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 251.500,82.000 C 254.403,83.516 252.733,81.178 257.500,84.000"
+		stroke-width="4.688"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 257.500,84.000 C 262.496,84.412 262.403,84.766 267.500,84.500"
+		stroke-width="3.755"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 267.500,84.500 C 276.750,84.500 276.746,84.662 286.000,84.500"
+		stroke-width="2.943"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 286.000,84.500 C 296.003,84.659 296.000,84.500 306.000,84.500"
+		stroke-width="2.618"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 306.000,84.500 C 311.755,84.328 311.753,84.409 317.500,84.000"
+		stroke-width="3.093"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 283.500,107.500 C 286.480,103.631 286.500,105.500 289.500,103.500"
+		stroke-width="5.405"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 289.500,103.500 C 292.492,104.948 292.230,103.381 295.000,107.000"
+		stroke-width="4.392"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 295.000,107.000 C 297.823,109.682 297.992,109.448 300.500,112.500"
+		stroke-width="4.005"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 300.500,112.500 C 305.367,117.709 302.573,114.682 304.500,117.000"
+		stroke-width="4.062"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 304.500,117.000 C 299.688,112.564 302.617,115.459 295.000,108.000"
+		stroke-width="4.500"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 295.000,108.000 C 290.063,103.424 290.188,103.314 285.500,98.500"
+		stroke-width="3.383"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 285.500,98.500 C 280.598,93.120 280.563,93.174 276.000,87.500"
+		stroke-width="3.189"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 259.000,75.500 C 255.756,71.142 256.000,71.000 253.000,66.500"
+		stroke-width="5.188"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 253.000,66.500 C 251.129,63.054 251.006,63.142 249.500,59.500"
+		stroke-width="4.174"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 249.500,59.500 C 246.997,56.639 248.379,57.054 247.500,54.500"
+		stroke-width="4.198"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 247.500,54.500 C 249.138,51.787 247.997,52.389 251.500,51.000"
+		stroke-width="4.866"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 251.500,51.000 C 254.755,51.151 254.388,50.037 258.000,51.000"
+		stroke-width="4.279"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 258.000,51.000 C 265.490,50.278 265.505,50.651 273.000,50.000"
+		stroke-width="3.211"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 273.000,50.000 C 285.749,49.625 285.740,49.528 298.500,49.500"
+		stroke-width="2.472"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 298.500,49.500 C 311.250,49.500 311.249,49.375 324.000,49.500"
+		stroke-width="2.251"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 324.000,49.500 C 331.750,49.500 331.750,49.500 339.500,49.500"
+		stroke-width="2.644"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 339.500,49.500 C 345.006,49.657 345.000,49.500 350.500,49.500"
+		stroke-width="3.091"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 281.500,76.000 C 279.661,71.445 281.250,72.250 281.000,68.500"
+		stroke-width="5.256"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 299.500,79.000 C 296.727,78.318 297.250,77.750 295.000,76.500"
+		stroke-width="5.334"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 295.000,76.500 C 292.448,72.784 291.977,73.318 290.000,69.000"
+		stroke-width="3.987"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 290.000,69.000 C 286.838,64.341 286.948,64.284 284.000,59.500"
+		stroke-width="3.483"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 284.000,59.500 C 282.865,56.937 282.588,57.091 281.500,54.500"
+		stroke-width="3.976"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 361.500,122.000 C 361.222,128.390 361.250,124.500 361.000,127.000"
+		stroke-width="5.293"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 361.000,127.000 C 360.135,118.258 360.222,122.140 359.500,109.500"
+		stroke-width="4.075"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 359.500,109.500 C 359.134,100.990 358.885,101.008 358.500,92.500"
+		stroke-width="3.026"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 358.500,92.500 C 357.623,84.259 357.884,84.240 357.000,76.000"
+		stroke-width="2.900"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 376.000,119.500 C 376.800,116.901 377.000,117.000 378.000,114.500"
+		stroke-width="5.389"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 378.000,114.500 C 379.956,112.198 379.300,111.901 381.000,109.500"
+		stroke-width="4.488"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 372.000,79.000 C 374.084,81.180 374.000,81.250 376.000,83.500"
+		stroke-width="5.379"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 376.000,83.500 C 378.883,86.902 378.834,86.930 381.500,90.500"
+		stroke-width="4.075"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 381.500,90.500 C 384.954,95.126 384.883,95.152 388.000,100.000"
+		stroke-width="3.477"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 388.000,100.000 C 390.069,103.117 389.954,103.126 391.500,106.500"
+		stroke-width="3.777"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 398.500,165.000 C 399.500,170.841 399.000,167.500 399.500,170.000"
+		stroke-width="5.250"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 399.500,170.000 C 399.108,164.987 399.500,168.341 398.500,160.000"
+		stroke-width="4.828"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 398.500,160.000 C 397.682,154.759 397.858,154.737 397.000,149.500"
+		stroke-width="3.716"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 397.000,149.500 C 395.918,141.259 395.932,141.259 395.000,133.000"
+		stroke-width="3.060"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 395.000,133.000 C 393.876,123.261 393.918,123.259 393.000,113.500"
+		stroke-width="2.732"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 393.000,113.500 C 392.021,103.762 392.126,103.761 391.500,94.000"
+		stroke-width="2.650"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 391.500,94.000 C 391.132,85.002 391.021,85.012 391.000,76.000"
+		stroke-width="2.647"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 391.000,76.000 C 391.000,68.000 390.882,68.002 391.000,60.000"
+		stroke-width="2.761"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 391.000,60.000 C 391.144,53.246 391.000,53.250 391.000,46.500"
+		stroke-width="2.958"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 367.500,100.000 C 377.727,98.685 377.750,99.000 388.000,98.000"
+		stroke-width="4.687"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 388.000,98.000 C 403.991,96.875 403.977,96.935 420.000,96.500"
+		stroke-width="2.364"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 420.000,96.500 C 436.002,96.654 435.991,96.125 452.000,96.500"
+		stroke-width="2.059"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 452.000,96.500 C 462.060,96.815 462.002,96.404 472.000,96.000"
+		stroke-width="2.349"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path><path
+		d="M 472.000,96.000 C 477.266,95.078 477.310,95.565 482.500,94.000"
+		stroke-width="2.982"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+	></path>
+</DrawSVG>
+
+<style>
+	:global(.signature-jp) {
+		opacity: 0;
+		animation: fade 0.1s ease-in-out var(--delay, 0s) forwards;
+	}
+
+	@keyframes fade {
+		to {
+			opacity: 1;
+		}
+	}
+</style>
