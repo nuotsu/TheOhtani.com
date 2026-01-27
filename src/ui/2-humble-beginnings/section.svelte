@@ -20,7 +20,7 @@
 			return lastPanelCenter - window.innerWidth / 2 + buffer
 		}
 
-		const endPadding = window.innerHeight * 0.5
+		const endPadding = window.innerHeight * 1.5
 
 		const tl = gsap.timeline({
 			scrollTrigger: {
@@ -35,7 +35,7 @@
 
 		tl.to(track, {
 			x: () => -getScrollDistance(),
-			ease: 'none',
+			ease: 'sine.inOut',
 			duration: 1,
 		})
 
@@ -68,7 +68,7 @@
 
 <section
 	id="humble-beginnings"
-	class="relative h-dvh overflow-hidden bg-[#ddddd1] text-background"
+	class="relative h-dvh overflow-clip bg-[#ddddd1] text-background"
 	bind:this={section}
 	{@attach intersectionObserver(...activateTableOfContents)}
 >
@@ -83,7 +83,7 @@
 	<div class="flex h-full items-center">
 		<div
 			bind:this={track}
-			class="track flex items-start gap-[10vw] pr-[calc(50vw-1lh)] pl-[75vw] will-change-transform *:shrink-0"
+			class="track flex items-start gap-[10vw] pr-[calc(50vw-1lh)] pl-[80vw] will-change-transform *:shrink-0"
 		>
 			<div class="panel space-y-ch">
 				<h3 class="font-serif text-2xl text-balance">Ōshū, Iwate Prefecture. July 5, 1994.</h3>

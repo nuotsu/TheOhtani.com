@@ -11,7 +11,7 @@
 	let years = $derived(options.slice(1))
 </script>
 
-<fieldset class="col-span-full flex justify-center md:ml-auto">
+<fieldset class="col-span-full mb-ch flex justify-center text-lg md:ml-auto">
 	<button
 		class="pr-ch transition-[color,translate] active:translate-x-[-.25ch]"
 		onclick={() => {

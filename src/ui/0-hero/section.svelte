@@ -4,7 +4,7 @@
 	import SignatureJP from '$ui/signature/signature-jp.svelte'
 </script>
 
-<header class="relative grid-system min-h-svh p-lh max-md:pb-[1.5lh]">
+<header class="relative grid-system min-h-svh overflow-clip p-lh max-md:pb-[1.5lh]">
 	<hgroup class="relative col-span-full mt-auto max-w-max max-md:row-[2/3] md:col-span-2">
 		<h1 class="flex flex-col font-serif uppercase">
 			<Count class="leading-none italic">Shohei</Count>
